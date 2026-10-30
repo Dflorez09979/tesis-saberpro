@@ -1,0 +1,1357 @@
+G3;Registered S3 methods overwritten by 'DescTools':
+  method   from
+  lines.Lc ineq
+  plot.Lc  ineq
+gHubo 24 avisos (use warnings() para verlos)
+Hubo 19 avisos (use warnings() para verlos)
+
+===== DATA CARGADA =====
+Filas: 281601 | Columnas: 54 
+
+===== FILTRO INDIVIDUAL / PUBLICAR =====
+Columna usada para 'individual' (texto): estu_estudiante 
+Valores observados en estu_estudiante (para confirmar si de verdad codifica INDIVIDUAL):
+
+ESTUDIANTE INDIVIDUAL 
+    272448       9153 
+Columna usada para 'publicar': NO ENCONTRADA (revisar nombre real) 
+Columna institucional usada como respaldo de 'individual': inst_cod_institucion 
+
+-----  Filtro de registros INDIVIDUAL / no publicable  -----
+# A tibble: 7 × 2
+  criterio                                            valor
+  <chr>                                               <int>
+1 Registros originales                               281601
+2 Marcados como INDIVIDUAL (texto)                     9153
+3 Marcados como INDIVIDUAL (sin institución)           9153
+4 Marcados como INDIVIDUAL (texto u sin institución)   9153
+5 Marcados como no publicable                             0
+6 Excluidos (INDIVIDUAL + no publicable)               9153
+7 Registros restantes                                272448
+Filas tras filtro INDIVIDUAL/PUBLICAR: 272448 
+
+-----  Validación inicial  -----
+# A tibble: 6 × 2
+  criterio                                            valor
+  <chr>                                               <dbl>
+1 Filas originales (tras filtro INDIVIDUAL/PUBLICAR) 272448
+2 Columnas originales                                    54
+3 Registros con punt_global no faltante              272448
+4 Porcentaje con punt_global no faltante                100
+5 Puntaje mínimo observado                                0
+6 Puntaje máximo observado                              271
+
+===== REGISTROS CON PUNTAJE GLOBAL = 0 =====
+Registros con punt_global = 0: 14 -> se excluyen
+Filas tras excluir puntajes en cero: 272434 
+
+-----  Diagnóstico de columnas (primeras 20 filas)  -----
+# A tibble: 20 × 8
+   variable                     tipo           n n_missing pct_missing n_unicos ejemplo_1                                     ejemplo_2
+   <chr>                        <chr>      <int>     <int>       <dbl>    <int> <chr>                                         <chr>    
+ 1 fami_tienemotocicleta        character 272434     12827      0.0471        2 No                                            No       
+ 2 fami_tienehornomicroogas     character 272434     11217      0.0412        2 No                                            No       
+ 3 estu_inse_individual         numeric   272434     10484      0.0385   233460 39.798901                                     47.073833
+ 4 estu_nse_individual          integer   272434     10484      0.0385        4 1                                             2        
+ 5 fami_estratovivienda         character 272434      7517      0.0276        7 Estrato 2                                     Estrato 2
+ 6 estu_pagomatriculabeca       character 272434      6106      0.0224        2 Si                                            No       
+ 7 estu_pagomatriculacredito    character 272434      6091      0.0224        2 No                                            Si       
+ 8 estu_pagomatriculapropio     character 272434      6072      0.0223        2 No                                            No       
+ 9 estu_horassemanatrabaja      character 272434      6049      0.0222        5 0                                             0        
+10 estu_pagomatriculapadres     character 272434      6043      0.0222        2 Si                                            No       
+11 estu_semestrecursa           character 272434      5916      0.0217       12 10                                            08       
+12 estu_tituloobtenidobachiller character 272434      5916      0.0217        3 Bachiller académico                           Bachille…
+13 fami_tieneautomovil          character 272434      5915      0.0217        2 No                                            No       
+14 fami_tienecomputador         character 272434      5844      0.0215        2 No                                            Si       
+15 fami_tienelavadora           character 272434      5796      0.0213        2 No                                            Si       
+16 fami_ocupacionmadre          character 272434      5644      0.0207       12 Empleado con cargo como director o gerente g… Empleado…
+17 fami_ocupacionpadre          character 272434      5643      0.0207       12 Otra actividad u ocupación                    Trabajad…
+18 fami_tieneserviciotv         character 272434      5634      0.0207        2 No                                            Si       
+19 fami_tieneinternet           character 272434      5574      0.0205        2 No                                            Si       
+20 estu_areareside              character 272434      5454      0.0200        2 Cabecera Municipal                            Cabecera…
+
+-----  Resumen skimr sobre muestra de 50.000 registros  -----
+── Data Summary ────────────────────────
+                           Values   
+Name                       data_skim
+Number of rows             50000    
+Number of columns          54       
+_______________________             
+Column type frequency:              
+  character                39       
+  numeric                  15       
+________________________            
+Group variables            None     
+
+── Variable type: character ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+   skim_variable                n_missing complete_rate min max empty n_unique whitespace
+ 1 estu_estudiante                      0         1      10  10     0        1          0
+ 2 estu_tipodocumento                   0         1       2   3     0        7          0
+ 3 estu_nacionalidad                    0         1       4  22     0       21          0
+ 4 estu_agregado                        0         1       1   1     0        2          0
+ 5 estu_areareside                    979         0.980  10  18     0        2          0
+ 6 estu_depto_presentacion              0         1       4  15     0       33          0
+ 7 estu_depto_reside                    0         1       4  15     0       35          0
+ 8 estu_discapacidad                    0         1       1   1     0        2          0
+ 9 estu_estadocivil                   157         0.997   6  18     0        4          0
+10 estu_exterior                        0         1       2   2     0        2          0
+11 estu_genero                          0         1       1   1     0        2          0
+12 estu_horassemanatrabaja           1078         0.978   1  19     0        5          0
+13 estu_inst_departamento               0         1       4  15     0       26          0
+14 estu_metodo_prgm                     3         1.000   9  16     0        4          0
+15 estu_nivel_prgm_academico            0         1      10  19     0        3          0
+16 estu_nucleo_pregrado                 0         1       6  53     0       56          0
+17 estu_pagomatriculabeca            1111         0.978   2   2     0        2          0
+18 estu_pagomatriculacredito         1107         0.978   2   2     0        2          0
+19 estu_pagomatriculapadres          1101         0.978   2   2     0        2          0
+20 estu_pagomatriculapropio          1109         0.978   2   2     0        2          0
+21 estu_pais_reside                     0         1       4  22     0       21          0
+22 estu_prgm_departamento               0         1       4  15     0       29          0
+23 estu_privado_libertad                0         1       1   1     0        2          0
+24 estu_semestrecursa                1073         0.979   2   8     0       12          0
+25 estu_tituloobtenidobachiller      1073         0.979  17  33     0        3          0
+26 fami_educacionmadre                970         0.981   7  36     0       12          0
+27 fami_educacionpadre                973         0.981   7  36     0       12          0
+28 fami_estratovivienda              1355         0.973   9  11     0        7          0
+29 fami_ocupacionmadre               1018         0.980   5  50     0       12          0
+30 fami_ocupacionpadre               1018         0.980   5  50     0       12          0
+31 fami_tieneautomovil               1058         0.979   2   2     0        2          0
+32 fami_tienecomputador              1042         0.979   2   2     0        2          0
+33 fami_tienehornomicroogas          2063         0.959   2   2     0        2          0
+34 fami_tieneinternet                 995         0.980   2   2     0        2          0
+35 fami_tienelavadora                1038         0.979   2   2     0        2          0
+36 fami_tienemotocicleta             2341         0.953   2   2     0        2          0
+37 fami_tieneserviciotv              1007         0.980   2   2     0        2          0
+38 inst_caracter_academico              0         1      11  25     0        4          0
+39 inst_origen                          0         1      16  24     0        6          0
+
+── Variable type: numeric ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   skim_variable               n_missing complete_rate       mean        sd      p0     p25     p50      p75     p100 hist 
+ 1 periodo                             0         1     20242.         0.991 20241   20241   20241    20243    20244   ▇▁▁▆▁
+ 2 estu_cod_depto_presentacion         0         1        29.3       25.7       5      11      15       52       99   ▇▁▁▂▁
+ 3 estu_cod_mcpio_presentacion         0         1     29406.     25771.     5001   11001   15001    52001    99001   ▇▁▁▂▁
+ 4 estu_cod_reside_depto               0         1       144.      3374.        0      11      15       52    99999   ▇▁▁▁▁
+ 5 estu_cod_reside_mcpio               0         1     29908.     25864.       19   11001   15783    52001    99999   ▇▂▂▃▁
+ 6 estu_inse_individual             1921         0.962    49.7       10.0      18.3    42.8    48.8     55.7     85.0 ▁▅▇▃▁
+ 7 estu_inst_codmunicipio              0         1     23743.     23573.     5001   11001   11001    25290    86001   ▇▁▁▁▁
+ 8 estu_nse_ies                        0         1         2.44       0.829     1       2       2        3        4   ▁▇▁▂▂
+ 9 estu_nse_individual              1921         0.962     2.44       1.11      1       2       2        4        4   ▅▇▁▃▆
+10 estu_prgm_codmunicipio              0         1     25105.     24157.     5001   11001   11001    41001    95001   ▇▁▁▂▁
+11 estu_snies_prgmacademico            0         1     49855.     45270.        1    3617   52061   103186   111541   ▇▁▂▁▆
+12 inst_cod_institucion                0         1      2470.      1669.     1101    1218    1833     2829     9933   ▇▁▁▁▁
+13 punt_global                         0         1       146.        25.4      21     129     145      163      265   ▁▂▇▂▁
+14 edad                               24         1.000    27.1        6.77     16      22      24       29       75   ▇▃▁▁▁
+15 diag_escrita_cero                   0         1         0.0670     0.250     0       0       0        0        1   ▇▁▁▁▁
+
+===== VARIABLES INSE DETECTADAS =====
+[1] "estu_inse_individual" "estu_nse_individual"  "estu_nse_ies"        
+
+===== DIAGNÓSTICO INSE =====
+Registros con INSE faltante (se imputarán con la mediana): 10484 de 272434 (3.8%)
+
+===== OK: ninguna variable categórica colapsó a 'Sin información' =====
+
+-- Chequeo puntual: tabla de estu_genero en `data` --
+
+     F      M   <NA> 
+156520 115913      1 
+
+-- Chequeo puntual: tabla de fami_tieneinternet en `data` --
+
+    No     Sí   <NA> 
+ 29048 237812   5574 
+
+-- Chequeo puntual: tabla de fami_tienecomputador en `data` --
+
+    No     Sí   <NA> 
+ 31379 235211   5844 
+
+-- Chequeo puntual: tabla de fami_tieneserviciotv en `data` --
+
+    No     Sí   <NA> 
+ 79856 186944   5634 
+
+-- Chequeo puntual: tabla de fami_tienelavadora en `data` --
+
+    No     Sí   <NA> 
+ 41258 225380   5796 
+
+-- Chequeo puntual: tabla de fami_tieneautomovil en `data` --
+
+    No     Sí   <NA> 
+181972  84547   5915 
+
+-- Chequeo puntual: tabla de fami_tienemotocicleta en `data` --
+
+    No     Sí   <NA> 
+162238  97369  12827 
+
+-- Chequeo puntual: tabla de fami_tienehornomicroogas en `data` --
+
+    No     Sí   <NA> 
+133614 127603  11217 
+
+===== DIAGNÓSTICO WINSORIZACIÓN DEL TARGET (NO SE APLICA) =====
+Rango P1-P99 de punt_global : 87 - 207 
+Registros fuera de ese rango que se preservan sin recortar: 5238 (1.92%)
+
+===== DATA PARA EDA =====
+Filas: 272434 | Columnas: 61 
+Estudiantes sin estrato reportado (siguen como NA, no se imputan): 8724 
+  - de ellos en blanco: 7517 | marcados 'Sin Estrato': 1207 
+  - media de punt_global en ese grupo: 139.44 
+
+===== EDA PROFESIONAL =====
+
+-----  Resumen global del puntaje  -----
+# A tibble: 1 × 19
+       n columnas media mediana desviacion minimo   p01   p05   p25   p75   p90   p95   p99 maximo asimetria curtosis   gini  theil
+   <int>    <int> <dbl>   <dbl>      <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>  <dbl>     <dbl>    <dbl>  <dbl>  <dbl>
+1 272434       61  146.     146       25.4     13    87   106   129   163   179   188   207    271    0.0769    0.137 0.0978 0.0153
+# ℹ 1 more variable: promedio_sobre_max_teorico <dbl>
+
+-----  Escala del puntaje global  -----
+# A tibble: 1 × 19
+  minimo_observado genero_minimo estrato_minimo n_minimo_observado   p25 mediana   p75   p90   p95 maximo_observado genero_maximo
+             <dbl> <chr>         <chr>                       <int> <dbl>   <dbl> <dbl> <dbl> <dbl>            <dbl> <chr>        
+1               13 F             Estrato 2                       2   129     146   163   179   188              271 M            
+# ℹ 8 more variables: estrato_maximo <chr>, n_maximo_observado <int>, maximo_teorico <dbl>, promedio <dbl>,
+#   promedio_sobre_max_observado <dbl>, promedio_sobre_max_teorico <dbl>, minimo_sobre_max_teorico <dbl>,
+#   maximo_observado_sobre_max_teorico <dbl>
+
+-----  Puntaje por estrato (solo estudiantes con estrato reportado)  -----
+# A tibble: 6 × 9
+  estrato_num     n    pct media mediana    sd   p25   p75   gini
+        <dbl> <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1           6  4130 0.0152  169.     172  27.5   153   188 0.0903
+2           5  7637 0.0280  166.     168  27.4   148   185 0.0927
+3           4 22997 0.0844  160.     161  26.4   142   178 0.0930
+4           3 76263 0.280   150.     150  24.5   133   166 0.0922
+5           2 94207 0.346   144.     143  23.2   128   159 0.0911
+6           1 58476 0.215   137.     137  23.0   122   153 0.0945
+
+-----  Puntaje por estrato, incluyendo 'No reporta estrato'  -----
+# A tibble: 7 × 9
+  estrato_desc           n    pct media mediana    sd   p25   p75   gini
+  <chr>              <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 Estrato 6           4130 0.0152  169.     172  27.5   153   188 0.0903
+2 Estrato 5           7637 0.0280  166.     168  27.4   148   185 0.0927
+3 Estrato 4          22997 0.0844  160.     161  26.4   142   178 0.0930
+4 Estrato 3          76263 0.280   150.     150  24.5   133   166 0.0922
+5 Estrato 2          94207 0.346   144.     143  23.2   128   159 0.0911
+6 No reporta estrato  8724 0.0320  139.     140  28.4   121   159 0.114 
+7 Estrato 1          58476 0.215   137.     137  23.0   122   153 0.0945
+
+-----  Puntaje por género  -----
+# A tibble: 3 × 9
+  estu_genero      n        pct media mediana    sd   p25   p75   gini
+  <chr>        <int>      <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 No reporta       1 0.00000367  187      187  NA     187   187 0     
+2 M           115913 0.425       149.     149  26.3   131   167 0.0996
+3 F           156520 0.575       144.     144  24.5   128   160 0.0956
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+
+-----  Puntaje por cuartil de INSE  -----
+# A tibble: 5 × 9
+  inse_cuartil                 n    pct media mediana    sd   p25   p75   gini
+  <fct>                    <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 Q4 INSE más alto         65488 0.240   159.     159  26.1   141   177 0.0928
+2 Q3                       65487 0.240   147.     147  23.9   131   163 0.0915
+3 Sin dato (INSE imputado) 10484 0.0385  145.     146  30.2   126   166 0.116 
+4 Q2                       65487 0.240   143.     142  23.0   127   158 0.0909
+5 Q1 INSE más bajo         65488 0.240   137.     137  22.5   122   152 0.0923
+
+-----  Puntaje según si el INSE fue imputado  -----
+# A tibble: 2 × 9
+  inse_imputado      n    pct media mediana    sd   p25   p75   gini
+  <lgl>          <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 FALSE         261950 0.962   146.     146  25.2   129   163 0.0970
+2 TRUE           10484 0.0385  145.     146  30.2   126   166 0.116 
+
+-----  Puntaje según fami_tieneinternet (sin imputar)  -----
+# A tibble: 3 × 9
+  fami_tieneinternet      n    pct media mediana    sd   p25   p75   gini
+  <chr>               <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 Sí                 237812 0.873   148.     147  25.2   130   164 0.0964
+2 No reporta           5574 0.0205  140.     141  29.1   122   160 0.116 
+3 No                  29048 0.107   136.     136  23.2   120   152 0.0963
+
+-----  Puntaje según fami_tienecomputador (sin imputar)  -----
+# A tibble: 3 × 9
+  fami_tienecomputador      n    pct media mediana    sd   p25   p75   gini
+  <chr>                 <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 Sí                   235211 0.863   148.     147  25.3   131   165 0.0963
+2 No reporta             5844 0.0215  140.     141  29.2   121   160 0.117 
+3 No                    31379 0.115   136.     136  22.9   120   151 0.0952
+
+-----  Composición institucional por grupo de estrato  -----
+# A tibble: 3 × 6
+  grupo                        n pct_oficial pct_presencial pct_universidad media_puntaje
+  <chr>                    <int>       <dbl>          <dbl>           <dbl>         <dbl>
+1 Estratos 1 y 2          152683       0.460          0.716           0.558          141.
+2 Estratos superiores a 2 111027       0.263          0.821           0.618          154.
+3 No reporta estrato        8724       0.385          0.767           0.643          139.
+
+-----  Puntaje según si comunicación escrita quedó en 0  -----
+# A tibble: 2 × 9
+  escrita_cero                   n    pct media mediana    sd   p25   p75   gini
+  <chr>                      <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 Calificada                254121 0.933   149.     148  23.4   132   165 0.0884
+2 Comunicación escrita en 0  18313 0.0672  107.     105  18.7    93   119 0.0985
+
+-----  Puntaje por grupo de edad (edad imputada con la mediana donde faltaba)  -----
+# A tibble: 5 × 9
+  grupo_edad     n    pct media mediana    sd   p25   p75   gini
+  <fct>      <int>  <dbl> <dbl>   <dbl> <dbl> <dbl> <dbl>  <dbl>
+1 15-22      68649 0.252   155.     156  24.8   139   172 0.0897
+2 23-25      90191 0.331   150.     150  25.3   133   167 0.0952
+3 26-30      54814 0.201   140.     140  23.7   125   156 0.0948
+4 31-40      42694 0.157   136.     136  22.2   121   151 0.0913
+5 41-80      16086 0.0590  134.     134  22.6   119   149 0.0945
+
+-----  Top 20 correlaciones con punt_global  -----
+# A tibble: 5 × 3
+  variable                cor abs_cor
+  <chr>                 <dbl>   <dbl>
+1 estu_inse_individual  0.341   0.341
+2 estu_nse_ies          0.314   0.314
+3 estrato_num           0.305   0.305
+4 estu_nse_individual   0.302   0.302
+5 edad                 -0.269   0.269
+RStudioGD 
+        2 
+
+===== INFERENCIA DESCRIPTIVA =====
+
+-----  Prueba t por género  -----
+
+	Welch Two Sample t-test
+
+data:  punt_global by estu_genero
+t = -47.246, df = 239350, p-value < 0.00000000000000022
+alternative hypothesis: true difference in means between group F and group M is not equal to 0
+95 percent confidence interval:
+ -4.875219 -4.486842
+sample estimates:
+mean in group F mean in group M 
+       144.2033        148.8843 
+
+
+-----  Tamaño del efecto (Cohen's d) por género  -----
+Cohen's d |         95% CI
+--------------------------
+-0.19     | [-0.19, -0.18]
+
+- Estimated using pooled SD.N usado en ANOVA / eta² / prueba t por estrato: 263710 (se excluyen 8724 sin estrato reportado)
+G3;For one-way between subjects designs, partial eta squared is equivalent to eta squared. Returning eta squared.
+g
+-----  ANOVA por estrato  -----
+                        Df    Sum Sq Mean Sq F value              Pr(>F)    
+factor(estrato_num)      5  15921387 3184277    5509 <0.0000000000000002 ***
+Residuals           263704 152423731     578                                
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+8724 observations deleted due to missingness
+
+-----  Eta cuadrado por estrato  -----
+# Effect Size for ANOVA
+
+Parameter           | Eta2 |       95% CI
+-----------------------------------------
+factor(estrato_num) | 0.09 | [0.09, 1.00]
+
+- One-sided CIs: upper bound fixed at [1.00].
+-----  Prueba t por grupo de estrato (PSM)  -----
+
+	Welch Two Sample t-test
+
+data:  punt_global by estrato_grupo_psm
+t = -128.07, df = 223859, p-value < 0.00000000000000022
+alternative hypothesis: true difference in means between group Estratos 1 y 2 and group Estratos superiores a 2 is not equal to 0
+95 percent confidence interval:
+ -12.77019 -12.38521
+sample estimates:
+         mean in group Estratos 1 y 2 mean in group Estratos superiores a 2 
+                             141.1231                              153.7008 
+
+
+===== MODELO INFERENCIAL =====
+N del modelo lineal inferencial: 263709 
+
+-----  Coeficientes del modelo lineal inferencial  -----
+# A tibble: 112 × 5
+   term                       estimate std.error statistic   p.value
+   <chr>                         <dbl>     <dbl>     <dbl>     <dbl>
+ 1 (Intercept)                   85.3     0.500     171.   0        
+ 2 estrato_num                    1.58    0.0552     28.6  1.76e-179
+ 3 estu_generoM                   1.37    0.0897     15.3  6.97e- 53
+ 4 estu_depto_resideAMAZONAS    -15.8     2.17       -7.30 2.82e- 13
+ 5 estu_depto_resideANTIOQUIA    -2.64    0.149     -17.7  7.26e- 70
+ 6 estu_depto_resideARAUCA      -11.4     0.851     -13.4  4.38e- 41
+ 7 estu_depto_resideATLANTICO    -4.23    0.193     -21.9  1.36e-106
+ 8 estu_depto_resideBOLIVAR      -6.62    0.242     -27.3  8.73e-164
+ 9 estu_depto_resideBOYACA       -2.78    0.262     -10.6  2.14e- 26
+10 estu_depto_resideCALDAS       -3.05    0.336      -9.06 1.30e- 19
+# ℹ 102 more rows
+# ℹ Use `print(n = ...)` to see more rows
+
+-----  Bondad de ajuste del modelo lineal inferencial  -----
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df    logLik      AIC      BIC   deviance df.residual   nobs
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>     <dbl>    <dbl>    <dbl>      <dbl>       <int>  <int>
+1     0.302         0.301  21.1     1026.       0   111 -1178465. 2357155. 2358340. 117545800.      263597 263709
+
+===== PSM CUASI-EXPERIMENTAL =====
+Registros en el PSM: 263710 | excluidos por no reportar estrato: 8724 
+G2;H2;Avisoh: Fewer control units than treated units in some `exact` strata; not all treated units will get a match.g
+
+-----  Prueba t sobre datos emparejados (PSM)  -----
+
+	Welch Two Sample t-test
+
+data:  punt_global by tratamiento
+t = -30.202, df = 155020, p-value < 0.00000000000000022
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ -3.933345 -3.453935
+sample estimates:
+mean in group 0 mean in group 1 
+       144.9694        148.6630 
+
+
+-----  Balance de covariables tras el PSM  -----
+Balance Measures
+                                                                               Type Diff.Un Diff.Adj
+distance                                                                   Distance  1.3737   0.1418
+estu_genero_F                                                                Binary -0.0491  -0.0115
+estu_genero_M                                                                Binary  0.0491   0.0115
+estu_genero_No reporta                                                       Binary  0.0000   0.0000
+estu_depto_reside_AMAZONAS                                                   Binary -0.0002  -0.0000
+estu_depto_reside_ANTIOQUIA                                                  Binary  0.0755   0.0189
+estu_depto_reside_ARAUCA                                                     Binary -0.0034  -0.0001
+estu_depto_reside_ATLANTICO                                                  Binary -0.0210  -0.0070
+estu_depto_reside_BOGOTÁ                                                     Binary  0.1773   0.0013
+estu_depto_reside_BOLIVAR                                                    Binary -0.0215  -0.0024
+estu_depto_reside_BOYACA                                                     Binary -0.0173  -0.0027
+estu_depto_reside_CALDAS                                                     Binary  0.0085   0.0036
+estu_depto_reside_CAQUETA                                                    Binary -0.0092   0.0000
+estu_depto_reside_CASANARE                                                   Binary -0.0083  -0.0003
+estu_depto_reside_CAUCA                                                      Binary -0.0209  -0.0006
+estu_depto_reside_CESAR                                                      Binary -0.0202  -0.0010
+estu_depto_reside_CHOCO                                                      Binary -0.0131  -0.0003
+estu_depto_reside_CORDOBA                                                    Binary -0.0372  -0.0007
+estu_depto_reside_CUNDINAMARCA                                               Binary  0.0140  -0.0036
+estu_depto_reside_EXTRANJERO                                                 Binary  0.0008   0.0002
+estu_depto_reside_GUAINIA                                                    Binary -0.0004   0.0000
+estu_depto_reside_GUAVIARE                                                   Binary -0.0014  -0.0000
+estu_depto_reside_HUILA                                                      Binary -0.0240  -0.0016
+estu_depto_reside_LA GUAJIRA                                                 Binary -0.0150  -0.0004
+estu_depto_reside_MAGDALENA                                                  Binary -0.0108  -0.0014
+estu_depto_reside_META                                                       Binary -0.0009  -0.0009
+estu_depto_reside_NARIÑO                                                     Binary -0.0249  -0.0008
+estu_depto_reside_NORTE SANTANDER                                            Binary -0.0266  -0.0003
+estu_depto_reside_OTRO / EXTERIOR                                            Binary  0.0001   0.0000
+estu_depto_reside_PUTUMAYO                                                   Binary -0.0068  -0.0000
+estu_depto_reside_QUINDIO                                                    Binary  0.0004  -0.0001
+estu_depto_reside_RISARALDA                                                  Binary  0.0076   0.0013
+estu_depto_reside_SAN ANDRES                                                 Binary -0.0004  -0.0000
+estu_depto_reside_SANTANDER                                                  Binary  0.0136   0.0029
+estu_depto_reside_SUCRE                                                      Binary -0.0196  -0.0004
+estu_depto_reside_TOLIMA                                                     Binary -0.0157  -0.0019
+estu_depto_reside_VALLE                                                      Binary  0.0223  -0.0016
+estu_depto_reside_VAUPES                                                     Binary -0.0003  -0.0000
+estu_depto_reside_VICHADA                                                    Binary -0.0007  -0.0001
+estu_prgm_departamento_ANTIOQUIA                                             Binary  0.0707   0.0199
+estu_prgm_departamento_ARAUCA                                                Binary -0.0008  -0.0000
+estu_prgm_departamento_ATLANTICO                                             Binary -0.0192  -0.0073
+estu_prgm_departamento_BOGOTÁ                                                Binary  0.1070  -0.0072
+estu_prgm_departamento_BOLIVAR                                               Binary -0.0208  -0.0023
+estu_prgm_departamento_BOYACA                                                Binary -0.0110  -0.0018
+estu_prgm_departamento_CALDAS                                                Binary  0.0081   0.0038
+estu_prgm_departamento_CAQUETA                                               Binary -0.0064   0.0001
+estu_prgm_departamento_CASANARE                                              Binary -0.0025  -0.0002
+estu_prgm_departamento_CAUCA                                                 Binary -0.0145  -0.0002
+estu_prgm_departamento_CESAR                                                 Binary -0.0115  -0.0009
+estu_prgm_departamento_CHOCO                                                 Binary -0.0137  -0.0004
+estu_prgm_departamento_CORDOBA                                               Binary -0.0281  -0.0009
+estu_prgm_departamento_CUNDINAMARCA                                          Binary  0.0108  -0.0005
+estu_prgm_departamento_GUAINIA                                               Binary -0.0001   0.0000
+estu_prgm_departamento_GUAVIARE                                              Binary -0.0001   0.0000
+estu_prgm_departamento_HUILA                                                 Binary -0.0147  -0.0016
+estu_prgm_departamento_LA GUAJIRA                                            Binary -0.0104   0.0000
+estu_prgm_departamento_MAGDALENA                                             Binary -0.0076  -0.0011
+estu_prgm_departamento_META                                                  Binary  0.0029   0.0001
+estu_prgm_departamento_NARIÑO                                                Binary -0.0169  -0.0007
+estu_prgm_departamento_NORTE SANTANDER                                       Binary -0.0289  -0.0002
+estu_prgm_departamento_PUTUMAYO                                              Binary -0.0027   0.0000
+estu_prgm_departamento_QUINDIO                                               Binary -0.0009  -0.0002
+estu_prgm_departamento_RISARALDA                                             Binary  0.0069   0.0008
+estu_prgm_departamento_SANTANDER                                             Binary  0.0136   0.0028
+estu_prgm_departamento_SUCRE                                                 Binary -0.0175  -0.0002
+estu_prgm_departamento_TOLIMA                                                Binary -0.0129  -0.0018
+estu_prgm_departamento_VALLE                                                 Binary  0.0210   0.0001
+estu_depto_presentacion_AMAZONAS                                             Binary -0.0002   0.0000
+estu_depto_presentacion_ANTIOQUIA                                            Binary  0.0730   0.0185
+estu_depto_presentacion_ARAUCA                                               Binary -0.0024  -0.0000
+estu_depto_presentacion_ATLANTICO                                            Binary -0.0241  -0.0074
+estu_depto_presentacion_BOGOTÁ                                               Binary  0.1833   0.0019
+estu_depto_presentacion_BOLIVAR                                              Binary -0.0208  -0.0022
+estu_depto_presentacion_BOYACA                                               Binary -0.0161  -0.0023
+estu_depto_presentacion_CALDAS                                               Binary  0.0069   0.0032
+estu_depto_presentacion_CAQUETA                                              Binary -0.0091   0.0001
+estu_depto_presentacion_CASANARE                                             Binary -0.0074  -0.0002
+estu_depto_presentacion_CAUCA                                                Binary -0.0152  -0.0003
+estu_depto_presentacion_CESAR                                                Binary -0.0218  -0.0011
+estu_depto_presentacion_CHOCO                                                Binary -0.0123  -0.0003
+estu_depto_presentacion_CORDOBA                                              Binary -0.0367  -0.0007
+estu_depto_presentacion_CUNDINAMARCA                                         Binary  0.0114  -0.0032
+estu_depto_presentacion_GUAINIA                                              Binary -0.0004   0.0000
+estu_depto_presentacion_GUAVIARE                                             Binary -0.0013  -0.0000
+estu_depto_presentacion_HUILA                                                Binary -0.0237  -0.0015
+estu_depto_presentacion_LA GUAJIRA                                           Binary -0.0116  -0.0001
+estu_depto_presentacion_MAGDALENA                                            Binary -0.0086  -0.0012
+estu_depto_presentacion_META                                                 Binary -0.0018  -0.0011
+estu_depto_presentacion_NARIÑO                                               Binary -0.0237  -0.0008
+estu_depto_presentacion_NORTE SANTANDER                                      Binary -0.0293  -0.0003
+estu_depto_presentacion_PUTUMAYO                                             Binary -0.0063  -0.0000
+estu_depto_presentacion_QUINDIO                                              Binary  0.0002  -0.0001
+estu_depto_presentacion_RISARALDA                                            Binary  0.0074   0.0012
+estu_depto_presentacion_SAN ANDRES                                           Binary -0.0004  -0.0001
+estu_depto_presentacion_SANTANDER                                            Binary  0.0111   0.0023
+estu_depto_presentacion_SUCRE                                                Binary -0.0194  -0.0002
+estu_depto_presentacion_TOLIMA                                               Binary -0.0141  -0.0019
+estu_depto_presentacion_VALLE                                                Binary  0.0141  -0.0020
+estu_depto_presentacion_VAUPES                                               Binary -0.0003   0.0000
+estu_depto_presentacion_VICHADA                                              Binary -0.0005  -0.0001
+inst_origen_NO OFICIAL - CORPORACIÓN                                         Binary  0.0300  -0.0161
+inst_origen_NO OFICIAL - FUNDACIÓN                                           Binary  0.1665   0.0096
+inst_origen_OFICIAL DEPARTAMENTAL                                            Binary -0.0992   0.0035
+inst_origen_OFICIAL MUNICIPAL                                                Binary -0.0047  -0.0012
+inst_origen_OFICIAL NACIONAL                                                 Binary -0.0929   0.0040
+inst_origen_REGIMEN ESPECIAL                                                 Binary  0.0003   0.0002
+inst_caracter_academico_INSTITUCIÓN TECNOLÓGICA                              Binary -0.0114  -0.0016
+inst_caracter_academico_INSTITUCIÓN UNIVERSITARIA                            Binary -0.0372   0.0025
+inst_caracter_academico_TÉCNICA PROFESIONAL                                  Binary -0.0116  -0.0029
+inst_caracter_academico_UNIVERSIDAD                                          Binary  0.0602   0.0020
+estu_metodo_prgm_DISTANCIA                                                   Binary -0.0885  -0.0082
+estu_metodo_prgm_DISTANCIA VITUAL                                            Binary -0.0172  -0.0005
+estu_metodo_prgm_No reporta                                                  Binary  0.0000   0.0000
+estu_metodo_prgm_PRESENCIAL                                                  Binary  0.1055   0.0086
+estu_metodo_prgm_SEMI-PRESENCIAL                                             Binary  0.0000   0.0000
+estu_nucleo_pregrado_ADMINISTRACIÓN                                          Binary -0.0087  -0.0022
+estu_nucleo_pregrado_AGRONOMÍA                                               Binary -0.0028  -0.0001
+estu_nucleo_pregrado_ANTROPOLOGÍA, ARTES LIBERALES                           Binary  0.0016   0.0003
+estu_nucleo_pregrado_ARQUITECTURA                                            Binary  0.0091   0.0004
+estu_nucleo_pregrado_ARTES PLÁSTICAS, VISUALES Y AFINES                      Binary  0.0055   0.0013
+estu_nucleo_pregrado_ARTES REPRESENTATIVAS                                   Binary  0.0009   0.0001
+estu_nucleo_pregrado_BACTERIOLOGÍA                                           Binary -0.0009  -0.0003
+estu_nucleo_pregrado_BIBLIOTECOLOGÍA, OTROS DE CIENCIAS SOCIALES Y HUMANAS   Binary -0.0002  -0.0003
+estu_nucleo_pregrado_BIOLOGÍA, MICROBIOLOGÍA Y AFINES                        Binary -0.0010   0.0007
+estu_nucleo_pregrado_CIENCIA POLÍTICA, RELACIONES INTERNACIONALES            Binary  0.0069   0.0007
+estu_nucleo_pregrado_COMUNICACIÓN SOCIAL, PERIODISMO Y AFINES                Binary  0.0178   0.0036
+estu_nucleo_pregrado_CONTADURÍA PUBLICA                                      Binary -0.0346  -0.0077
+estu_nucleo_pregrado_DEPORTES, EDUCACIÓN FÍSICA Y RECREACIÓN                 Binary  0.0004   0.0003
+estu_nucleo_pregrado_DERECHO Y AFINES                                        Binary  0.0300   0.0058
+estu_nucleo_pregrado_DISEÑO                                                  Binary  0.0168   0.0028
+estu_nucleo_pregrado_ECONOMÍA                                                Binary  0.0080   0.0010
+estu_nucleo_pregrado_EDUCACIÓN                                               Binary -0.0615  -0.0047
+estu_nucleo_pregrado_ENFERMERÍA                                              Binary -0.0059  -0.0029
+estu_nucleo_pregrado_FILOSOFÍA, TEOLOGÍA Y AFINES                            Binary  0.0009   0.0003
+estu_nucleo_pregrado_FÍSICA                                                  Binary  0.0006   0.0003
+estu_nucleo_pregrado_FORMACIÓN RELACIONADA CON EL CAMPO MILITAR O POLICIAL   Binary  0.0004  -0.0007
+estu_nucleo_pregrado_GEOGRAFÍA, HISTORIA                                     Binary -0.0008   0.0003
+estu_nucleo_pregrado_GEOLOGÍA, OTROS PROGRAMAS DE CIENCIAS NATURALES         Binary  0.0006   0.0001
+estu_nucleo_pregrado_INGENIERÍA ADMINISTRATIVA Y AFINES                      Binary  0.0017   0.0001
+estu_nucleo_pregrado_INGENIERÍA AGRÍCOLA, FORESTAL Y AFINES                  Binary -0.0019  -0.0000
+estu_nucleo_pregrado_INGENIERÍA AGROINDUSTRIAL, ALIMENTOS Y AFINES           Binary -0.0041  -0.0002
+estu_nucleo_pregrado_INGENIERÍA AGRONÓMICA, PECUARIA Y AFINES                Binary -0.0034  -0.0001
+estu_nucleo_pregrado_INGENIERÍA AMBIENTAL, SANITARIA Y AFINES                Binary -0.0061  -0.0013
+estu_nucleo_pregrado_INGENIERÍA BIOMÉDICA Y AFINES                           Binary  0.0033   0.0004
+estu_nucleo_pregrado_INGENIERÍA CIVIL Y AFINES                               Binary  0.0007  -0.0010
+estu_nucleo_pregrado_INGENIERÍA DE MINAS, METALURGIA Y AFINES                Binary -0.0002   0.0003
+estu_nucleo_pregrado_INGENIERÍA DE SISTEMAS, TELEMÁTICA Y AFINES             Binary  0.0019   0.0009
+estu_nucleo_pregrado_INGENIERÍA ELÉCTRICA Y AFINES                           Binary -0.0004  -0.0005
+estu_nucleo_pregrado_INGENIERÍA ELECTRÓNICA, TELECOMUNICACIONES Y AFINES     Binary  0.0002   0.0000
+estu_nucleo_pregrado_INGENIERÍA INDUSTRIAL Y AFINES                          Binary -0.0010  -0.0026
+estu_nucleo_pregrado_INGENIERÍA MECÁNICA Y AFINES                            Binary  0.0050  -0.0003
+estu_nucleo_pregrado_INGENIERÍA QUÍMICA Y AFINES                             Binary  0.0030   0.0006
+estu_nucleo_pregrado_INSTRUMENTACIÓN QUIRÚRGICA                              Binary -0.0006  -0.0002
+estu_nucleo_pregrado_LENGUAS MODERNAS, LITERATURA, LINGÜÍSTICA Y AFINES      Binary  0.0042   0.0003
+estu_nucleo_pregrado_MATEMÁTICAS, ESTADÍSTICA Y AFINES                       Binary  0.0009  -0.0000
+estu_nucleo_pregrado_MEDICINA                                                Binary  0.0309   0.0046
+estu_nucleo_pregrado_MEDICINA VETERINARIA                                    Binary  0.0040   0.0008
+estu_nucleo_pregrado_MÚSICA                                                  Binary  0.0035   0.0008
+estu_nucleo_pregrado_NUTRICIÓN Y DIETÉTICA                                   Binary  0.0011   0.0002
+estu_nucleo_pregrado_ODONTOLOGÍA                                             Binary  0.0036   0.0006
+estu_nucleo_pregrado_OPTOMETRÍA, OTROS PROGRAMAS DE CIENCIAS DE LA SALUD     Binary  0.0012  -0.0001
+estu_nucleo_pregrado_OTRAS INGENIERÍAS                                       Binary  0.0006   0.0002
+estu_nucleo_pregrado_OTROS PROGRAMAS ASOCIADOS A BELLAS ARTES                Binary  0.0012   0.0004
+estu_nucleo_pregrado_PSICOLOGÍA                                              Binary -0.0049  -0.0014
+estu_nucleo_pregrado_PUBLICIDAD Y AFINES                                     Binary  0.0053   0.0022
+estu_nucleo_pregrado_QUÍMICA Y AFINES                                        Binary  0.0017   0.0005
+estu_nucleo_pregrado_SALUD PUBLICA                                           Binary -0.0102  -0.0015
+estu_nucleo_pregrado_SIN CLASIFICAR                                          Binary -0.0061  -0.0014
+estu_nucleo_pregrado_SOCIOLOGÍA, TRABAJO SOCIAL Y AFINES                     Binary -0.0168  -0.0014
+estu_nucleo_pregrado_TERAPIAS                                                Binary  0.0018  -0.0003
+estu_nucleo_pregrado_ZOOTECNIA                                               Binary -0.0027   0.0000
+fami_tieneinternet_No                                                        Binary -0.1331  -0.0073
+fami_tieneinternet_No reporta                                                Binary  0.0001  -0.0000
+fami_tieneinternet_Sí                                                        Binary  0.1330   0.0073
+fami_tienecomputador_No                                                      Binary -0.1289  -0.0091
+fami_tienecomputador_No reporta                                              Binary -0.0000   0.0000
+fami_tienecomputador_Sí                                                      Binary  0.1289   0.0091
+fami_educacionpadre_Educación profesional completa                           Binary  0.1294   0.0298
+fami_educacionpadre_Educación profesional incompleta                         Binary  0.0207   0.0066
+fami_educacionpadre_Ninguno                                                  Binary -0.0234  -0.0039
+fami_educacionpadre_No Aplica                                                Binary -0.0003   0.0002
+fami_educacionpadre_No reporta                                               Binary -0.0001   0.0000
+fami_educacionpadre_No sabe                                                  Binary  0.0036   0.0017
+fami_educacionpadre_Postgrado                                                Binary  0.1018   0.0181
+fami_educacionpadre_Primaria completa                                        Binary -0.0467  -0.0125
+fami_educacionpadre_Primaria incompleta                                      Binary -0.1237  -0.0249
+fami_educacionpadre_Secundaria (Bachillerato) completa                       Binary -0.0436  -0.0132
+fami_educacionpadre_Secundaria (Bachillerato) incompleta                     Binary -0.0335  -0.0098
+fami_educacionpadre_Técnica o tecnológica completa                           Binary  0.0133   0.0061
+fami_educacionpadre_Técnica o tecnológica incompleta                         Binary  0.0025   0.0020
+fami_educacionmadre_Educación profesional completa                           Binary  0.1332   0.0263
+fami_educacionmadre_Educación profesional incompleta                         Binary  0.0214   0.0069
+fami_educacionmadre_Ninguno                                                  Binary -0.0194  -0.0027
+fami_educacionmadre_No Aplica                                                Binary -0.0003   0.0001
+fami_educacionmadre_No reporta                                               Binary -0.0000   0.0001
+fami_educacionmadre_No sabe                                                  Binary  0.0011   0.0002
+fami_educacionmadre_Postgrado                                                Binary  0.0994   0.0188
+fami_educacionmadre_Primaria completa                                        Binary -0.0470  -0.0112
+fami_educacionmadre_Primaria incompleta                                      Binary -0.1005  -0.0194
+fami_educacionmadre_Secundaria (Bachillerato) completa                       Binary -0.0587  -0.0170
+fami_educacionmadre_Secundaria (Bachillerato) incompleta                     Binary -0.0367  -0.0096
+fami_educacionmadre_Técnica o tecnológica completa                           Binary  0.0089   0.0065
+fami_educacionmadre_Técnica o tecnológica incompleta                         Binary -0.0015   0.0010
+estu_horassemanatrabaja_0                                                    Binary  0.0404   0.0029
+estu_horassemanatrabaja_Entre 11 y 20 horas                                  Binary -0.0232   0.0000
+estu_horassemanatrabaja_Entre 21 y 30 horas                                  Binary -0.0103   0.0000
+estu_horassemanatrabaja_Más de 30 horas                                      Binary  0.0104  -0.0022
+estu_horassemanatrabaja_Menos de 10 horas                                    Binary -0.0174  -0.0007
+estu_horassemanatrabaja_No reporta                                           Binary  0.0001  -0.0000
+estu_pagomatriculabeca_No                                                    Binary  0.1216   0.0091
+estu_pagomatriculabeca_No reporta                                            Binary  0.0148   0.0027
+estu_pagomatriculabeca_Si                                                    Binary -0.1364  -0.0118
+estu_pagomatriculacredito_No                                                 Binary -0.0018   0.0139
+estu_pagomatriculacredito_No reporta                                         Binary  0.0147   0.0026
+estu_pagomatriculacredito_Si                                                 Binary -0.0129  -0.0165
+estu_pagomatriculapadres_No                                                  Binary -0.1726  -0.0257
+estu_pagomatriculapadres_No reporta                                          Binary  0.0146   0.0026
+estu_pagomatriculapadres_Si                                                  Binary  0.1580   0.0231
+estu_pagomatriculapropio_No                                                  Binary  0.0365   0.0030
+estu_pagomatriculapropio_No reporta                                          Binary  0.0146   0.0026
+estu_pagomatriculapropio_Si                                                  Binary -0.0511  -0.0056
+estu_nse_ies                                                                Contin.  0.7291   0.0000
+estu_areareside_Area Rural                                                   Binary -0.0769  -0.0093
+estu_areareside_Cabecera Municipal                                           Binary  0.0624   0.0066
+estu_areareside_No reporta                                                   Binary  0.0144   0.0027
+estu_tituloobtenidobachiller_Bachiller académico                             Binary  0.0936   0.0193
+estu_tituloobtenidobachiller_Bachiller pedagógico o normalista               Binary -0.0080  -0.0009
+estu_tituloobtenidobachiller_Bachiller técnico                               Binary -0.1003  -0.0211
+estu_tituloobtenidobachiller_No reporta                                      Binary  0.0146   0.0027
+
+Sample sizes
+          Control Treated
+All        152683  111027
+Matched     77693   77693
+Unmatched   74990   33334
+
+ATT estimado (diferencia promedio ajustada): 3.69364 
+
+===== LÍMITES DE ROSENBAUM (SENSIBILIDAD PSM) =====
+
+-----  Límites de Rosenbaum (sensibilidad Hodges-Lehmann) sobre el PSM  -----
+
+ Rosenbaum Sensitivity Test for Hodges-Lehmann Point Estimate 
+ 
+Unconfounded estimate ....  3.5 
+
+ Gamma Lower bound Upper bound
+   1.0    3.500000         3.5
+   1.1    2.400000         5.0
+   1.2    0.900050         6.5
+   1.3   -0.099952         7.5
+   1.4   -1.100000         8.5
+   1.5   -2.100000         9.5
+   1.6   -3.100000        10.5
+   1.7   -4.100000        11.5
+   1.8   -5.100000        12.0
+   1.9   -5.600000        13.0
+   2.0   -6.600000        13.5
+   2.1   -7.100000        14.5
+   2.2   -7.600000        15.0
+   2.3   -8.600000        15.5
+   2.4   -9.100000        16.0
+   2.5   -9.600000        17.0
+   2.6  -10.100000        17.5
+   2.7  -10.600000        18.0
+   2.8  -11.100000        18.5
+   2.9  -11.600000        19.0
+   3.0  -12.100000        19.5
+
+ Note: Gamma is Odds of Differential Assignment To
+ Treatment Due to Unobserved Factors 
+ 
+
+-----  Rosenbaum con psens (cotas del p-valor de Wilcoxon por Gamma)  -----
+   gamma p_inferior p_superior
+1   1.00          0     0.0000
+2   1.05          0     0.0000
+3   1.10          0     0.0000
+4   1.15          0     0.0000
+5   1.20          0     0.0000
+6   1.25          0     0.0000
+7   1.30          0     0.7684
+8   1.35          0     1.0000
+9   1.40          0     1.0000
+10  1.45          0     1.0000
+11  1.50          0     1.0000
+12  1.55          0     1.0000
+13  1.60          0     1.0000
+14  1.65          0     1.0000
+15  1.70          0     1.0000
+16  1.75          0     1.0000
+17  1.80          0     1.0000
+18  1.85          0     1.0000
+19  1.90          0     1.0000
+20  1.95          0     1.0000
+21  2.00          0     1.0000
+22  2.05          0     1.0000
+23  2.10          0     1.0000
+24  2.15          0     1.0000
+25  2.20          0     1.0000
+26  2.25          0     1.0000
+27  2.30          0     1.0000
+28  2.35          0     1.0000
+29  2.40          0     1.0000
+30  2.45          0     1.0000
+31  2.50          0     1.0000
+32  2.55          0     1.0000
+33  2.60          0     1.0000
+34  2.65          0     1.0000
+35  2.70          0     1.0000
+36  2.75          0     1.0000
+37  2.80          0     1.0000
+38  2.85          0     1.0000
+39  2.90          0     1.0000
+40  2.95          0     1.0000
+41  3.00          0     1.0000
+Gamma crítico de SIGNIFICANCIA (psens, p superior > 0,05): 1.3 
+Gamma donde el límite inferior del ESTIMADOR HL llega a cero (hlsens): 1.3 
+Pilas: son dos preguntas distintas, en el documento se reportan las dos con su nombre.
+
+===== PSM: BRECHA CRUDA, MÍNIMA, ORIGEN FAMILIAR Y COMPLETA =====
+Covariables previas usadas: estu_genero, fami_educacionmadre, fami_educacionpadre, depto_reside_cod, estu_areareside, estu_tituloobtenidobachiller 
+Covariables de la especificación mínima (sin educación de los padres): estu_genero, depto_reside_cod, estu_areareside, estu_tituloobtenidobachiller 
+
+-----  Brecha por estrato: cruda, mínima, origen familiar y completa  -----
+# A tibble: 4 × 21
+  especificacion            n_tratados n_controles pares tratados_sin_pareja pct_tratados_sin_par…¹ diferencia_medias ic95_inf ic95_sup
+  <chr>                          <int>       <int> <int>               <int>                  <dbl>             <dbl>    <dbl>    <dbl>
+1 Cruda (sin ajuste)            111027      152683    NA                  NA                 NA                 12.6     12.4     12.8 
+2 Demográficas y territori…     111027      152683 93275               17752                  0.160             10.2     10.0     10.5 
+3 Origen familiar y territ…     111027      152683 84472               26555                  0.239              4.88     4.65     5.11
+4 Todas las covariables (i…     111027      152683 77693               33334                  0.300              3.69     3.45     3.93
+# ℹ abbreviated name: ¹​pct_tratados_sin_pareja
+# ℹ 12 more variables: diferencia_pareada <dbl>, ic95_pareada_inf <dbl>, ic95_pareada_sup <dbl>, hodges_lehmann <dbl>,
+#   gamma_hl_cero <dbl>, gamma_significancia <dbl>, dme_max_post <dbl>, covariable_dme_max <chr>, n_cov_dme_sobre_0_1 <int>,
+#   att_ajustado_regresion <dbl>, ic95_att_aj_inf <dbl>, ic95_att_aj_sup <dbl>
+                                                                   especificacion n_tratados n_controles pares tratados_sin_pareja
+1                                                              Cruda (sin ajuste)     111027      152683    NA                  NA
+2 Demográficas y territoriales (género, depto y zona de residencia, bachillerato)     111027      152683 93275               17752
+3     Origen familiar y territorial (las anteriores + educación de madre y padre)     111027      152683 84472               26555
+4                    Todas las covariables (incluye institución, programa y pago)     111027      152683 77693               33334
+  pct_tratados_sin_pareja diferencia_medias  ic95_inf  ic95_sup diferencia_pareada ic95_pareada_inf ic95_pareada_sup hodges_lehmann
+1                      NA         12.577701 12.385208 12.770194                 NA               NA               NA             NA
+2               0.1598890         10.230694 10.005485 10.455903          10.230694        10.010187        10.451202           10.5
+3               0.2391761          4.879203  4.649588  5.108818           4.879203         4.659196         5.099209            5.0
+4               0.3002333          3.693640  3.453935  3.933345           3.693640         3.461926         3.925355            3.5
+  gamma_hl_cero gamma_significancia dme_max_post                                 covariable_dme_max n_cov_dme_sobre_0_1
+1            NA                  NA           NA                                               <NA>                  NA
+2          1.95                1.95   0.09691772                                      estu_genero_F                   0
+3          1.40                1.40   0.03420068            fami_educacionpadre_Primaria incompleta                   0
+4          1.30                1.30   0.02975815 fami_educacionpadre_Educación profesional completa                   0
+  att_ajustado_regresion ic95_att_aj_inf ic95_att_aj_sup
+1                     NA              NA              NA
+2               9.318748        9.096285        9.541212
+3               3.591005        3.371759        3.810252
+4               2.499883        2.292227        2.707539
+
+===== SENSIBILIDAD: BRECHA Y PSM SIN COMUNICACIÓN ESCRITA EN 0 =====
+Registros del PSM sin escrita en 0: 246602 | excluidos: 17108 
+% con escrita en 0 por grupo de tratamiento (antes de excluir):
+# A tibble: 2 × 2
+  tratamiento pct_escrita_cero
+  <fct>                  <dbl>
+1 0                       7.43
+2 1                       5.19
+G2;H2;Avisoh: Fewer control units than treated units in some `exact` strata; not all treated units will get a match.g
+                          muestra                                                                  especificacion pares
+1     Principal (puntaje oficial)                                                              Cruda (sin ajuste)    NA
+2     Principal (puntaje oficial) Demográficas y territoriales (género, depto y zona de residencia, bachillerato) 93275
+3     Principal (puntaje oficial)     Origen familiar y territorial (las anteriores + educación de madre y padre) 84472
+4     Principal (puntaje oficial)                    Todas las covariables (incluye institución, programa y pago) 77693
+5 Sensibilidad (sin escrita en 0)                                                          Cruda sin escrita en 0    NA
+6 Sensibilidad (sin escrita en 0)                                         Todas las covariables, sin escrita en 0 72945
+  diferencia_medias  ic95_inf  ic95_sup att_ajustado_regresion hodges_lehmann gamma_significancia dme_max_post
+1         12.577701 12.385208 12.770194                     NA             NA                  NA           NA
+2         10.230694 10.005485 10.455903               9.318748           10.5                1.95   0.09691772
+3          4.879203  4.649588  5.108818               3.591005            5.0                1.40   0.03420068
+4          3.693640  3.453935  3.933345               2.499883            3.5                1.30   0.02975815
+5         11.943158 11.759899 12.126416                     NA             NA                  NA           NA
+6          3.644938  3.417060  3.872816               2.482113            3.5                1.30   0.02965248
+
+===== PREPROCESAMIENTO ML =====
+Banderas protegidas del filtro nzv: estrato_faltante.TRUE, inse_imputado.TRUE 
+Variables finales para ML: 83 
+
+===== MODELOS PREDICTIVOS =====
+Ridge lambda.min: 0.8675 | Lasso lambda.min: 0.005576 
+
+===== TUNING DE HIPERPARÁMETROS RANDOM FOREST =====
+Combinación RF 1 de 9 | CV-RMSE: 20.5413 
+Growing trees.. Progress: 74%. Estimated remaining time: 11 seconds.
+Growing trees.. Progress: 74%. Estimated remaining time: 10 seconds.
+Growing trees.. Progress: 73%. Estimated remaining time: 11 seconds.
+Growing trees.. Progress: 74%. Estimated remaining time: 11 seconds.
+Growing trees.. Progress: 66%. Estimated remaining time: 15 seconds.
+Combinación RF 2 de 9 | CV-RMSE: 20.2294 
+Growing trees.. Progress: 50%. Estimated remaining time: 31 seconds.
+Growing trees.. Progress: 50%. Estimated remaining time: 30 seconds.
+Growing trees.. Progress: 50%. Estimated remaining time: 31 seconds.
+Growing trees.. Progress: 48%. Estimated remaining time: 33 seconds.
+Growing trees.. Progress: 51%. Estimated remaining time: 30 seconds.
+Combinación RF 3 de 9 | CV-RMSE: 20.1895 
+Combinación RF 4 de 9 | CV-RMSE: 20.5591 
+Growing trees.. Progress: 81%. Estimated remaining time: 7 seconds.
+Growing trees.. Progress: 78%. Estimated remaining time: 8 seconds.
+Growing trees.. Progress: 75%. Estimated remaining time: 10 seconds.
+Growing trees.. Progress: 78%. Estimated remaining time: 8 seconds.
+Growing trees.. Progress: 77%. Estimated remaining time: 9 seconds.
+Combinación RF 5 de 9 | CV-RMSE: 20.2256 
+Growing trees.. Progress: 53%. Estimated remaining time: 27 seconds.
+Growing trees.. Progress: 55%. Estimated remaining time: 25 seconds.
+Growing trees.. Progress: 55%. Estimated remaining time: 25 seconds.
+Growing trees.. Progress: 55%. Estimated remaining time: 25 seconds.
+Growing trees.. Progress: 55%. Estimated remaining time: 25 seconds.
+Combinación RF 6 de 9 | CV-RMSE: 20.1722 
+Combinación RF 7 de 9 | CV-RMSE: 20.595 
+Growing trees.. Progress: 90%. Estimated remaining time: 3 seconds.
+Growing trees.. Progress: 88%. Estimated remaining time: 4 seconds.
+Growing trees.. Progress: 89%. Estimated remaining time: 3 seconds.
+Growing trees.. Progress: 88%. Estimated remaining time: 4 seconds.
+Growing trees.. Progress: 80%. Estimated remaining time: 7 seconds.
+Combinación RF 8 de 9 | CV-RMSE: 20.2402 
+Growing trees.. Progress: 59%. Estimated remaining time: 21 seconds.
+Growing trees.. Progress: 61%. Estimated remaining time: 20 seconds.
+Growing trees.. Progress: 59%. Estimated remaining time: 21 seconds.
+Growing trees.. Progress: 59%. Estimated remaining time: 21 seconds.
+Growing trees.. Progress: 59%. Estimated remaining time: 21 seconds.
+Combinación RF 9 de 9 | CV-RMSE: 20.1702 
+
+El mejor Random Forest quedó en el borde de la malla, se amplía una vez:
+Growing trees.. Progress: 41%. Estimated remaining time: 46 seconds.
+Growing trees.. Progress: 84%. Estimated remaining time: 11 seconds.
+Growing trees.. Progress: 41%. Estimated remaining time: 45 seconds.
+Growing trees.. Progress: 83%. Estimated remaining time: 12 seconds.
+Growing trees.. Progress: 41%. Estimated remaining time: 44 seconds.
+Growing trees.. Progress: 85%. Estimated remaining time: 10 seconds.
+Growing trees.. Progress: 38%. Estimated remaining time: 49 seconds.
+Growing trees.. Progress: 81%. Estimated remaining time: 14 seconds.
+Growing trees.. Progress: 41%. Estimated remaining time: 45 seconds.
+Growing trees.. Progress: 85%. Estimated remaining time: 11 seconds.
+Combinación RF extra 1 | mtry = 21 | min.node.size = 20 | CV-RMSE: 20.1386 
+Growing trees.. Progress: 67%. Estimated remaining time: 15 seconds.
+Growing trees.. Progress: 67%. Estimated remaining time: 15 seconds.
+Growing trees.. Progress: 66%. Estimated remaining time: 15 seconds.
+Growing trees.. Progress: 67%. Estimated remaining time: 15 seconds.
+Growing trees.. Progress: 64%. Estimated remaining time: 17 seconds.
+Combinación RF extra 2 | mtry = 14 | min.node.size = 40 | CV-RMSE: 20.1929 
+Growing trees.. Progress: 46%. Estimated remaining time: 36 seconds.
+Growing trees.. Progress: 96%. Estimated remaining time: 2 seconds.
+Growing trees.. Progress: 48%. Estimated remaining time: 34 seconds.
+Growing trees.. Progress: 100%. Estimated remaining time: 0 seconds.
+Growing trees.. Progress: 48%. Estimated remaining time: 34 seconds.
+Growing trees.. Progress: 100%. Estimated remaining time: 0 seconds.
+Growing trees.. Progress: 48%. Estimated remaining time: 34 seconds.
+Growing trees.. Progress: 99%. Estimated remaining time: 0 seconds.
+Growing trees.. Progress: 48%. Estimated remaining time: 34 seconds.
+Growing trees.. Progress: 100%. Estimated remaining time: 0 seconds.
+Combinación RF extra 3 | mtry = 21 | min.node.size = 40 | CV-RMSE: 20.1519 
+Ojo: mtry = 21 quedó en el borde SUPERIOR de la malla
+
+-----  Resultados de la búsqueda de hiperparámetros Random Forest  -----
+# A tibble: 12 × 4
+   combinacion  mtry min_node_size cv_rmse
+         <dbl> <dbl>         <dbl>   <dbl>
+ 1          10    21            20    20.1
+ 2          12    21            40    20.2
+ 3           9    14            20    20.2
+ 4           6    14            10    20.2
+ 5           3    14             5    20.2
+ 6          11    14            40    20.2
+ 7           5     9            10    20.2
+ 8           2     9             5    20.2
+ 9           8     9            20    20.2
+10           1     4             5    20.5
+11           4     4            10    20.6
+12           7     4            20    20.6
+
+Mejor combinación Random Forest (combinación 10 ): mtry = 21 | min.node.size = 20 
+Rango del CV-RMSE entre combinaciones de Random Forest: 0.4565 
+Growing trees.. Progress: 89%. Estimated remaining time: 3 seconds.
+Growing trees.. Progress: 65%. Estimated remaining time: 16 seconds.
+Growing trees.. Progress: 50%. Estimated remaining time: 33 seconds.
+Growing trees.. Progress: 30%. Estimated remaining time: 1 minute, 11 seconds.
+Growing trees.. Progress: 66%. Estimated remaining time: 31 seconds.
+Growing trees.. Progress: 99%. Estimated remaining time: 0 seconds.
+Growing trees.. Progress: 24%. Estimated remaining time: 1 minute, 40 seconds.
+Growing trees.. Progress: 50%. Estimated remaining time: 1 minute, 5 seconds.
+Growing trees.. Progress: 75%. Estimated remaining time: 32 seconds.
+Growing trees.. Progress: 20%. Estimated remaining time: 2 minutes, 5 seconds.
+Growing trees.. Progress: 39%. Estimated remaining time: 1 minute, 35 seconds.
+Growing trees.. Progress: 58%. Estimated remaining time: 1 minute, 6 seconds.
+Growing trees.. Progress: 78%. Estimated remaining time: 34 seconds.
+Growing trees.. Progress: 99%. Estimated remaining time: 1 seconds.
+Growing trees.. Progress: 12%. Estimated remaining time: 3 minutes, 39 seconds.
+Growing trees.. Progress: 25%. Estimated remaining time: 3 minutes, 13 seconds.
+Growing trees.. Progress: 38%. Estimated remaining time: 2 minutes, 35 seconds.
+Growing trees.. Progress: 51%. Estimated remaining time: 2 minutes, 2 seconds.
+Growing trees.. Progress: 63%. Estimated remaining time: 1 minute, 31 seconds.
+Growing trees.. Progress: 76%. Estimated remaining time: 59 seconds.
+Growing trees.. Progress: 89%. Estimated remaining time: 27 seconds.
+
+-----  Error OOB de Random Forest según número de árboles  -----
+# A tibble: 8 × 2
+  num_trees oob_rmse
+      <dbl>    <dbl>
+1        50     20.4
+2       100     20.3
+3       150     20.2
+4       200     20.2
+5       300     20.1
+6       400     20.1
+7       500     20.1
+8       800     20.1
+num.trees final seleccionado para Random Forest: 100 
+Growing trees.. Progress: 91%. Estimated remaining time: 3 seconds.
+Computing permutation importance.. Progress: 45%. Estimated remaining time: 39 seconds.
+
+===== TUNING DE HIPERPARÁMETROS XGBOOST =====
+Combinación 1 de 12 | CV-RMSE: 19.9885 
+Combinación 2 de 12 | CV-RMSE: 19.9933 
+Combinación 3 de 12 | CV-RMSE: 19.8953 
+Combinación 4 de 12 | CV-RMSE: 19.8876 
+Combinación 5 de 12 | CV-RMSE: 19.9793 
+Combinación 6 de 12 | CV-RMSE: 19.8939 
+Combinación 7 de 12 | CV-RMSE: 19.9364 
+Combinación 8 de 12 | CV-RMSE: 19.8905 
+Combinación 9 de 12 | CV-RMSE: 19.9084 
+Combinación 10 de 12 | CV-RMSE: 19.9129 
+Combinación 11 de 12 | CV-RMSE: 19.9502 
+Combinación 12 de 12 | CV-RMSE: 19.9677 
+
+-----  Resultados de la búsqueda de hiperparámetros XGBoost  -----
+# A tibble: 12 × 8
+   combinacion   eta max_depth min_child_weight subsample colsample_bytree mejor_nrounds cv_rmse
+         <int> <dbl>     <dbl>            <dbl>     <dbl>            <dbl>         <int>   <dbl>
+ 1           4  0.03         8                3       0.8              0.7           641    19.9
+ 2           8  0.03         8                5       0.7              0.8           648    19.9
+ 3           6  0.03        10                8       0.8              0.8           423    19.9
+ 4           3  0.03        10                3       0.8              0.8           434    19.9
+ 5           9  0.05         6                8       0.8              0.8           784    19.9
+ 6          10  0.05         8                5       0.7              0.8           377    19.9
+ 7           7  0.08         6                5       0.7              0.8           491    19.9
+ 8          11  0.08         4                8       0.7              0.8           998    20.0
+ 9          12  0.08        10                8       0.8              0.7           136    20.0
+10           5  0.08        10                8       0.8              0.8           121    20.0
+11           1  0.05         4                5       0.7              0.7          1000    20.0
+12           2  0.05         4                5       0.8              0.7          1000    20.0
+
+Mejor combinación seleccionada (combinación 4 ):
+$objective
+[1] "reg:squarederror"
+
+$eta
+[1] 0.03
+
+$max_depth
+[1] 8
+
+$min_child_weight
+[1] 3
+
+$subsample
+[1] 0.8
+
+$colsample_bytree
+[1] 0.7
+
+$eval_metric
+[1] "rmse"
+
+nrounds: 641 
+Ojo: eta = 0.03 quedó en el borde INFERIOR de la malla
+Early stopping activado: el CV-RMSE dejó de mejorar en la ronda 641 
+
+===== DIAGNÓSTICO SESGO-VARIANZA XGBOOST (TRAIN VS. TEST) =====
+
+-----  RMSE/MAE/R² de XGBoost: entrenamiento vs. prueba  -----
+# A tibble: 2 × 7
+  modelo           RMSE   MAE    R2 R2_cor2 MAE_pct_max_teorico RMSE_pct_max_teorico
+  <chr>           <dbl> <dbl> <dbl>   <dbl>               <dbl>                <dbl>
+1 XGBoost (train)  18.3  14.4 0.480   0.484              0.0479               0.0611
+2 XGBoost (test)   19.8  15.5 0.387   0.387              0.0517               0.0660
+Brecha relativa (test-train)/train: 8.0%
+Interpretación automática: Brecha moderada entre train y test: dentro de lo esperable para un modelo razonablemente ajustado; la compresión observada en el gráfico de predicción vs. observado responde principalmente al R² disponible, no a sub-ajuste ni sobre-ajuste. 
+
+===== CURVAS DE VALIDACIÓN Y DE ERROR XGBOOST =====
+
+-----  Curva de validación XGBoost — max_depth  -----
+# A tibble: 9 × 3
+  valor train_rmse cv_rmse
+  <dbl>      <dbl>   <dbl>
+1     2       20.8    20.8
+2     3       20.3    20.4
+3     4       20.0    20.2
+4     5       19.7    20.1
+5     6       19.4    20.0
+6     7       18.8    19.9
+7     8       18.1    19.9
+8     9       17.4    19.9
+9    10       16.8    19.9
+
+-----  Curva de validación XGBoost — min_child_weight  -----
+# A tibble: 8 × 3
+  valor train_rmse cv_rmse
+  <dbl>      <dbl>   <dbl>
+1     1       18.0    19.9
+2     2       18.0    19.9
+3     3       18.1    19.9
+4     5       18.1    19.9
+5     8       18.2    19.9
+6    12       18.3    19.9
+7    20       18.4    19.9
+8    30       18.5    19.9
+
+-----  Resumen de validación cruzada por modelo  -----
+# A tibble: 5 × 3
+  modelo                 hiperparametros_ajustados                                     metodo_validacion                               
+  <chr>                  <chr>                                                         <chr>                                           
+1 Regresión lineal       Ninguno (no tiene hiperparámetros de regularización)          No aplica                                       
+2 Ridge                  lambda                                                        Validación cruzada de 5 partes (cv.glmnet)      
+3 Lasso                  lambda                                                        Validación cruzada de 5 partes (cv.glmnet)      
+4 Random Forest (Ranger) mtry, min.node.size (num.trees por curva de error OOB)        Validación cruzada de 5 partes (malla de 9 comb…
+5 XGBoost                eta, max_depth, min_child_weight, subsample, colsample_bytree Validación cruzada de 5 partes (xgb.cv): búsque…
+
+-----  Comparación de modelos predictivos  -----
+# A tibble: 5 × 7
+  modelo            RMSE   MAE    R2 R2_cor2 MAE_pct_max_teorico RMSE_pct_max_teorico
+  <chr>            <dbl> <dbl> <dbl>   <dbl>               <dbl>                <dbl>
+1 XGBoost           19.8  15.5 0.387   0.387              0.0517               0.0660
+2 Ranger RF         20.1  15.8 0.369   0.369              0.0525               0.0670
+3 Regresión lineal  21.1  16.6 0.303   0.303              0.0554               0.0704
+4 Lasso             21.1  16.6 0.303   0.303              0.0554               0.0704
+5 Ridge             21.1  16.6 0.302   0.302              0.0554               0.0704
+
+-----  Error de XGBoost por decil del puntaje observado (positivo = sobreestima)  -----
+# A tibble: 10 × 8
+   decil_real     n real_min real_max real_promedio pred_promedio error_medio  rmse
+        <int> <int>    <dbl>    <dbl>         <dbl>         <dbl>       <dbl> <dbl>
+ 1          1  5449       25      115          103.          134.     31.2     34.4
+ 2          2  5449      115      125          120.          136.     15.7     19.1
+ 3          3  5449      125      133          129.          138.      9.57    14.9
+ 4          4  5449      133      139          136.          140.      4.17    11.9
+ 5          5  5449      139      146          143.          143.      0.0492  11.7
+ 6          6  5449      146      152          149.          145.     -3.57    12.6
+ 7          7  5448      152      159          156.          148.     -7.15    14.5
+ 8          8  5448      159      168          163.          152.    -11.1     17.1
+ 9          9  5448      168      179          173.          158.    -15.1     20.5
+10         10  5448      179      268          191.          168.    -23.5     28.2
+
+===== SHAP SOBRE TEST =====
+
+-----  Top 25 variables SHAP  -----
+# A tibble: 25 × 3
+   variable                            importance familia                     
+   <chr>                                    <dbl> <chr>                       
+ 1 edad                                      4.10 Individuales y trayectoria  
+ 2 inst_caracter_academico.UNIVERSIDAD       3.98 Académicas e institucionales
+ 3 estu_nse_ies                              2.65 Académicas e institucionales
+ 4 estu_metodo_prgm.PRESENCIAL               2.11 Académicas e institucionales
+ 5 estrato_num                               1.77 Socioeconómicas y hogar     
+ 6 estu_inse_individual                      1.51 Socioeconómicas y hogar     
+ 7 estu_genero.M                             1.42 Individuales y trayectoria  
+ 8 inst_origen.OFICIAL.NACIONAL              1.37 Académicas e institucionales
+ 9 estu_pagomatriculabeca.Si                 1.35 Económicas y laborales      
+10 fami_tieneserviciotv.Sí                   1.21 Bienes y tecnología         
+# ℹ 15 more rows
+# ℹ Use `print(n = ...)` to see more rows
+
+-----  Importancia SHAP por familia de variables  -----
+# A tibble: 6 × 6
+  familia                      importancia_total n_columnas n_variables participacion importancia_promedio
+  <chr>                                    <dbl>      <int>       <int>         <dbl>                <dbl>
+1 Académicas e institucionales              7.08         13           5        0.318                 1.42 
+2 Individuales y trayectoria                4.45          9           5        0.200                 0.890
+3 Socioeconómicas y hogar                   4.03         29           9        0.181                 0.448
+4 Territoriales                             2.71         17           5        0.122                 0.541
+5 Económicas y laborales                    2.36          8           5        0.106                 0.473
+6 Bienes y tecnología                       1.62          7           7        0.0730                0.232
+
+-----  Mapa variable -> familia usado en SHAP (para la Tabla 1)  -----
+              variable_original                      familia
+1              estu_metodo_prgm Académicas e institucionales
+2                  estu_nse_ies Académicas e institucionales
+3          estu_nucleo_pregrado Académicas e institucionales
+4       inst_caracter_academico Académicas e institucionales
+5                   inst_origen Académicas e institucionales
+6           fami_tieneautomovil          Bienes y tecnología
+7          fami_tienecomputador          Bienes y tecnología
+8      fami_tienehornomicroogas          Bienes y tecnología
+9            fami_tieneinternet          Bienes y tecnología
+10           fami_tienelavadora          Bienes y tecnología
+11        fami_tienemotocicleta          Bienes y tecnología
+12         fami_tieneserviciotv          Bienes y tecnología
+13      estu_horassemanatrabaja       Económicas y laborales
+14       estu_pagomatriculabeca       Económicas y laborales
+15    estu_pagomatriculacredito       Económicas y laborales
+16     estu_pagomatriculapadres       Económicas y laborales
+17     estu_pagomatriculapropio       Económicas y laborales
+18                         edad   Individuales y trayectoria
+19             estu_estadocivil   Individuales y trayectoria
+20                  estu_genero   Individuales y trayectoria
+21           estu_semestrecursa   Individuales y trayectoria
+22 estu_tituloobtenidobachiller   Individuales y trayectoria
+23             estrato_faltante      Socioeconómicas y hogar
+24                  estrato_num      Socioeconómicas y hogar
+25         estu_inse_individual      Socioeconómicas y hogar
+26          estu_nse_individual      Socioeconómicas y hogar
+27          fami_educacionmadre      Socioeconómicas y hogar
+28          fami_educacionpadre      Socioeconómicas y hogar
+29          fami_ocupacionmadre      Socioeconómicas y hogar
+30          fami_ocupacionpadre      Socioeconómicas y hogar
+31                inse_imputado      Socioeconómicas y hogar
+32              estu_areareside                Territoriales
+33      estu_depto_presentacion                Territoriales
+34            estu_depto_reside                Territoriales
+35       estu_inst_departamento                Territoriales
+36       estu_prgm_departamento                Territoriales
+
+-----  H2: participación SHAP del entorno vs. lo individual  -----
+# A tibble: 3 × 5
+  bloque_h2              importancia_total n_columnas n_variables participacion
+  <chr>                              <dbl>      <int>       <int>         <dbl>
+1 Institucional (aparte)              7.08         13           5         0.393
+2 Entorno (H2)                        6.48         61          26         0.360
+3 Individual (H2)                     4.45          9           5         0.247
+
+-----  Consistencia de importancia: SHAP vs. gain vs. permutación  -----
+# A tibble: 15 × 6
+   variable                                rank_shap rank_gain rank_permutacion en_top7_los_tres rank_promedio
+   <chr>                                       <int>     <int>            <int> <lgl>                    <dbl>
+ 1 edad                                            1         2                4 TRUE                      2.33
+ 2 inst_caracter_academico.UNIVERSIDAD             2         4                1 TRUE                      2.33
+ 3 estu_nse_ies                                    3         1                3 TRUE                      2.33
+ 4 estu_inse_individual                            6         3                2 TRUE                      3.67
+ 5 estu_metodo_prgm.PRESENCIAL                     4         6                5 TRUE                      5   
+ 6 estrato_num                                     5         5                8 FALSE                     6   
+ 7 inst_origen.OFICIAL.NACIONAL                    8         7                7 FALSE                     7.33
+ 8 estu_pagomatriculabeca.Si                       9         9               14 FALSE                    10.7 
+ 9 inst_origen.OFICIAL.DEPARTAMENTAL              11         8               13 FALSE                    10.7 
+10 estu_depto_presentacion.BOGOTÁ                 13        11                9 FALSE                    11   
+11 estu_depto_reside.BOGOTÁ                       14        21               10 FALSE                    15   
+12 estu_areareside.Cabecera.Municipal             12        13               23 FALSE                    16   
+13 estu_horassemanatrabaja.Más.de.30.horas        20        12               17 FALSE                    16.3 
+14 fami_tienecomputador.Sí                        18        10               22 FALSE                    16.7 
+15 estu_genero.M                                   7        15               30 FALSE                    17.3 
+Variables en el top 7 de las tres medidas: edad, inst_caracter_academico.UNIVERSIDAD, estu_nse_ies, estu_inse_individual, estu_metodo_prgm.PRESENCIAL 
+
+===== EQUIDAD PREDICTIVA =====
+
+-----  Equidad predictiva: escrita_cero  -----
+# A tibble: 2 × 9
+  escrita_cero                        n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <chr>                           <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 Comunicación escrita en 0        3640          107.          140.  36.4  32.9       32.6                0.121               0.110 
+2 Comunicación escrita calificada 50846          149.          147.  18.0  14.3       -2.31               0.0601              0.0476
+
+-----  Equidad predictiva: genero  -----
+# A tibble: 2 × 9
+  genero     n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <chr>  <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 M      23369          149.          149.  20.8  16.3     -0.0459               0.0693              0.0543
+2 F      31117          144.          144.  19.0  14.9      0.0729               0.0634              0.0497
+
+-----  Equidad predictiva: estrato  -----
+# A tibble: 7 × 9
+  estrato         n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <chr>       <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 Sin Estrato   231          135.          137.  25.5  19.6      1.54                 0.0848              0.0654
+2 Estrato 6     821          170.          169.  22.4  17.3     -0.724                0.0745              0.0575
+3 Estrato 5    1543          166.          166.  22.2  17.4     -0.596                0.0741              0.0581
+4 Estrato 4    4490          160.          160.  20.9  16.2      0.504                0.0696              0.0541
+5 Estrato 3   15485          150.          150.  19.9  15.6      0.188                0.0664              0.0521
+6 Estrato 2   18713          144.          144.  19.2  15.1      0.0811               0.0639              0.0503
+7 Estrato 1   11722          137.          137.  19.1  15.0     -0.318                0.0636              0.0501
+
+-----  Equidad predictiva: estrato_num  -----
+# A tibble: 6 × 9
+  estrato_num     n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+        <dbl> <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1           6   821          170.          169.  22.4  17.3     -0.724                0.0745              0.0575
+2           5  1543          166.          166.  22.2  17.4     -0.596                0.0741              0.0581
+3           4  4490          160.          160.  20.9  16.2      0.504                0.0696              0.0541
+4           3 15485          150.          150.  19.9  15.6      0.188                0.0664              0.0521
+5           2 18713          144.          144.  19.2  15.1      0.0811               0.0639              0.0503
+6           1 11722          137.          137.  19.1  15.0     -0.318                0.0636              0.0501
+
+-----  Equidad predictiva: estrato_grupo  -----
+# A tibble: 2 × 9
+  estrato_grupo_psm           n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <chr>                   <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 Estratos superiores a 2 22339          154.          154.  20.4  15.9      0.164                0.0679              0.0531
+2 Estratos 1 y 2          30435          141.          141.  19.1  15.1     -0.0727               0.0638              0.0502
+
+-----  Equidad predictiva: inse_cuartil  -----
+# A tibble: 5 × 9
+  inse_cuartil                 n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <fct>                    <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 Sin dato (INSE imputado)  2099          144.          145.  24.1  18.4      0.569                0.0802              0.0613
+2 Q4 INSE más alto         13233          159.          159.  20.8  16.2      0.144                0.0692              0.0541
+3 Q3                       13053          147.          147.  19.7  15.5      0.0690               0.0655              0.0516
+4 Q2                       13034          142.          142.  19.3  15.2      0.102                0.0642              0.0506
+5 Q1 INSE más bajo         13067          137.          137.  18.7  14.7     -0.316                0.0624              0.0490
+
+-----  Equidad predictiva: inse_imputado  -----
+# A tibble: 2 × 9
+  inse_imputado     n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <lgl>         <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 TRUE           2099          144.          145.  24.1  18.4   0.569                   0.0802              0.0613
+2 FALSE         52387          146.          146.  19.6  15.4   0.0000540               0.0654              0.0513
+
+===== VALIDACIÓN FUERA DEL TIEMPO (COHORTE 2025) =====
+Registros 2025 con punt_global = 0: 8 (excluidos)
+Registros 2025: 295321 | excluidos INDIVIDUAL: 9019 | usados en la validación: 286294 
+Instituciones 2024 donde estu_nse_ies es (casi) único, >= 95% de sus estudiantes: 100 %
+Registros 2025 con estu_nse_ies recuperado desde 2024: 100 %
+
+-----  Validación fuera del tiempo: 2024 vs. 2025  -----
+# A tibble: 4 × 8
+  modelo                                       RMSE   MAE    R2 R2_cor2 MAE_pct_max_teorico RMSE_pct_max_teorico      n
+  <chr>                                       <dbl> <dbl> <dbl>   <dbl>               <dbl>                <dbl>  <int>
+1 XGBoost | prueba 2024 (partición aleatoria)  19.8  15.5 0.387   0.387              0.0517               0.0660  54486
+2 XGBoost | cohorte 2025 (fuera del tiempo)    19.0  15.0 0.381   0.389              0.0499               0.0632 286294
+3 Ranger RF | cohorte 2025                     19.2  15.2 0.364   0.372              0.0506               0.0641 286294
+4 Regresión lineal | cohorte 2025              20.0  15.9 0.309   0.314              0.0530               0.0668 286294
+
+-----  Corrimiento de nivel 2024 vs. 2025 (XGBoost)  -----
+# A tibble: 2 × 5
+  cohorte      real_promedio pred_promedio error_medio correlacion_real_pred
+  <chr>                <dbl>         <dbl>       <dbl>                 <dbl>
+1 Prueba 2024           146.          146.      0.0220                 0.622
+2 Cohorte 2025          148.          146.     -2.11                   0.624
+                                       modelo     RMSE      MAE        R2   R2_cor2      n
+1 XGBoost | prueba 2024 (partición aleatoria) 19.80232 15.51408 0.3871549 0.3871571  54486
+2   XGBoost | cohorte 2025 (fuera del tiempo) 18.95602 14.96687 0.3814132 0.3893407 286294
+3                    Ranger RF | cohorte 2025 19.22503 15.19460 0.3637317 0.3721663 286294
+4             Regresión lineal | cohorte 2025 20.03476 15.88985 0.3090055 0.3136293 286294
+
+-----  Equidad predictiva 2025: genero  -----
+# A tibble: 2 × 9
+  genero      n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <chr>   <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 M      119782          151.          149.  19.8  15.7       -2.14               0.0660              0.0522
+2 F      166510          146.          144.  18.3  14.5       -2.08               0.0611              0.0482
+
+-----  Equidad predictiva 2025: estrato_grupo_psm  -----
+# A tibble: 2 × 9
+  estrato_grupo_psm            n real_promedio pred_promedio  rmse   mae error_medio rmse_pct_max_teorico mae_pct_max_teorico
+  <chr>                    <int>         <dbl>         <dbl> <dbl> <dbl>       <dbl>                <dbl>               <dbl>
+1 Estratos superiores a 2 120282          155.          153.  19.5  15.4       -1.76               0.0651              0.0513
+2 Estratos 1 y 2          163889          143.          141.  18.5  14.6       -2.37               0.0616              0.0488
+
+===== SENSIBILIDAD 2025: NIVEL Y ERROR CON Y SIN COMUNICACIÓN ESCRITA EN 0 =====
+                           modelo      n pct_escrita_cero real_promedio pred_promedio error_medio     RMSE        R2   R2_cor2
+1             Prueba 2024 | todos  54486         6.680615      146.1788      146.2008  0.02197663 19.80232 0.3871549 0.3871571
+2  Prueba 2024 | sin escrita en 0  50846         0.000000      148.9741      146.6617 -2.31244210 18.04409 0.4005894 0.4117697
+3            Cohorte 2025 | todos 286294         1.677297      148.1599      146.0534 -2.10645805 18.95602 0.3814132 0.3893407
+4 Cohorte 2025 | sin escrita en 0 281492         0.000000      148.8895      146.1597 -2.72984496 18.44971 0.3830477 0.3973067
+
+===== GUARDANDO OBJETOS FINALES =====
+
+-----  Bitácora metodológica  -----
+# A tibble: 48 × 2
+   componente                                                  decision                                                                
+   <chr>                                                       <chr>                                                                   
+ 1 Fuente                                                      Base pública Saber Pro 2024 (anonimizada), DataIcfes > 02_Examen Saber …
+ 2 Filtro INDIVIDUAL/PUBLICAR (texto + respaldo institucional) Se excluyen registros marcados como INDIVIDUAL (por texto en estu_estud…
+ 3 INSE                                                        Se usa estu_inse_individual como índice socioeconómico oficial; no se c…
+ 4 INSE imputado                                               Se documenta con la bandera inse_imputado (TRUE/FALSE) antes de imputar…
+ 5 Variable dependiente                                        punt_global como variable continua. CORREGIDO: ya no se winsoriza ni se…
+ 6 Tratamiento PSM                                             tratamiento = 1 si estrato_num > 2; 0 si estrato_num <= 2               
+ 7 PSM                                                         PSM se reporta como diferencia promedio ajustada bajo comparabilidad ob…
+ 8 Rosenbaum bounds                                            Sensibilidad a sesgo oculto con dos lecturas: hlsens (rango del estimad…
+ 9 Modelos predictivos                                         Regresión lineal, Ridge, Lasso, Ranger RF y XGBoost se comparan con la …
+10 Tuning Random Forest                                        Los hiperparámetros de Random Forest (mtry, min.node.size) se ajustan c…
+# ℹ 38 more rows
+# ℹ Use `print(n = ...)` to see more rows
+
+===== TIEMPO TOTAL =====
+Time difference of 1.815294 hours
+
+Pipeline finalizado correctamente.
+
+Salidas guardadas en: C:/Users/Diego Florez C/OneDrive/MAESTRIA EN CIENCIA DE DATOS/Proyecto_Grado/App/salidas_tesis 
+Además, cada gráfico y cada tabla de resultados se mostraron en el panel Plots / consola de RStudio a medida que se generaban.
+
+===== SESSION INFO (reproducibilidad) =====
+R version 4.5.0 (2025-04-11 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26300)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=Spanish_Colombia.utf8  LC_CTYPE=Spanish_Colombia.utf8    LC_MONETARY=Spanish_Colombia.utf8
+[4] LC_NUMERIC=C                      LC_TIME=Spanish_Colombia.utf8    
+
+time zone: America/Bogota
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] rbounds_2.2         DescTools_0.99.60   rmarkdown_2.32      knitr_1.52          gridExtra_2.3.1     ggrepel_0.9.8      
+ [7] car_3.1-5           carData_3.0-6       pROC_1.19.1         patchwork_1.3.2     DT_0.34.0           plotly_4.12.1      
+[13] margins_0.3.28      factoextra_2.2.0    fastshap_0.1.1      GGally_2.4.0        corrplot_0.95       DataExplorer_0.9.0 
+[19] skimr_2.2.2         scales_1.4.0        naniar_1.1.0        effectsize_1.0.3    ineq_0.2-13         e1071_1.7-17       
+[25] janitor_2.2.1       broom_1.0.13        cobalt_5.0.0        MatchIt_4.8.1       ranger_0.18.0       glmnet_5.1         
+[31] Matrix_1.7-3        xgboost_3.2.1.1     caret_7.0-1         lattice_0.22-6      data.table_1.18.6.1 lubridate_1.9.5    
+[37] forcats_1.0.1       stringr_1.6.0       dplyr_1.2.1         purrr_1.2.2         readr_2.2.0         tidyr_1.3.2        
+[43] tibble_3.3.1        ggplot2_4.0.3       tidyverse_2.0.0    
+
+loaded via a namespace (and not attached):
+  [1] RColorBrewer_1.1-3   rstudioapi_0.19.0    jsonlite_2.0.0       shape_1.4.6.1        datawizard_1.4.1     magrittr_2.0.5      
+  [7] estimability_2.0.0   farver_2.1.2         ragg_1.5.2           fs_2.1.0             vctrs_0.7.3          base64enc_0.1-6     
+ [13] htmltools_0.5.9      haven_2.5.5          cellranger_1.1.0     Formula_1.2-6        parallelly_1.48.0    htmlwidgets_1.6.4   
+ [19] plyr_1.8.9           rootSolve_1.8.2.4    emmeans_2.0.4        networkD3_0.4.1      igraph_2.3.4         lifecycle_1.0.5     
+ [25] iterators_1.0.14     pkgconfig_2.0.3      R6_2.6.1             fastmap_1.2.0        future_1.80.0        snakecase_0.11.1    
+ [31] Exact_3.3            digest_0.6.39        textshaping_1.0.5    labeling_0.4.3       timechange_0.4.0     mgcv_1.9-1          
+ [37] httr_1.4.9           abind_1.4-8          compiler_4.5.0       proxy_0.4-29         withr_3.0.3          S7_0.2.2            
+ [43] backports_1.5.1      ggstats_0.14.0       prediction_0.3.18    MASS_7.3-65          lava_1.9.3           gld_2.6.8           
+ [49] ModelMetrics_1.2.2.2 tools_4.5.0          otel_0.2.0           visdat_0.6.1         future.apply_1.21.0  nnet_7.3-20         
+ [55] glue_1.8.1           nlme_3.1-168         grid_4.5.0           reshape2_1.4.5       generics_0.1.4       recipes_1.4.0       
+ [61] gtable_0.3.6         tzdb_0.5.0           class_7.3-23         hms_1.1.4            lmom_3.3             utf8_1.2.6          
+ [67] foreach_1.5.2        pillar_1.11.1        splines_4.5.0        survival_3.8-3       tidyselect_1.2.1     arg_0.2.1           
+ [73] stats4_4.5.0         xfun_0.62            expm_1.0-1           hardhat_1.4.3        timeDate_4052.112    stringi_1.8.9       
+ [79] boot_1.3-31          evaluate_1.0.5       codetools_0.2-20     data.tree_1.2.0      cli_3.6.6            rpart_4.1.24        
+ [85] systemfonts_1.3.2    xtable_1.8-8         parameters_0.30.0    repr_1.1.7           readxl_1.5.0.1       Rcpp_1.1.2          
+ [91] globals_0.20.0       parallel_4.5.0       gower_1.0.2          bayestestR_0.20.0    listenv_1.1.0        viridisLite_0.4.3   
+ [97] mvtnorm_1.4-2        ipred_0.9-16         prodlim_2026.03.11   insight_1.6.0        rlang_1.3.0         

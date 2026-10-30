@@ -30,6 +30,22 @@ Portal: https://icfesgovco.sharepoint.com/sites/BasesDataIcfes
 
 Los scripts instalan los paquetes que falten. Las salidas (tablas, figuras y el log con `sessionInfo()`) quedan en `salidas_tesis/`. Pilas: el pipeline completo es pesado (más de 270.000 registros, tuning de Random Forest y XGBoost); en un portátil puede tardar varias horas.
 
+## Registros y resultados
+
+Para que el jurado pueda revisar las cifras del documento sin correr nada:
+
+- `registros/`: el log de la limpieza (`salida_limpieza_saberpro.txt`), el log completo del pipeline (`salida_pipeline_saberpro.txt`), el `sessionInfo.txt` con la versión de R y de los paquetes, y el diagnóstico de compatibilidad de variables entre 2024 y 2025.
+- `resultados/`: las tablas y figuras que genera `pipeline_tesis_saberpro.R`, organizadas igual que en `salidas_tesis/`:
+  - `01_diagnostico`: faltantes y validación inicial.
+  - `02_eda`: análisis exploratorio.
+  - `04_psm`: balance, soporte común y Rosenbaum.
+  - `05_modelos`: tuning, curvas de validación y validación con 2025.
+  - `06_shap`: interpretabilidad.
+  - `07_equidad`: auditoría de equidad predictiva.
+  - `09_tablas`: tablas del documento, incluida la `bitacora_metodologica.csv`.
+
+Ojo: no se publican los objetos de los modelos (`.rds`, más de 700 MB), la muestra emparejada del PSM ni las predicciones por estudiante. Todos se reconstruyen corriendo los scripts.
+
 ## Licencia
 
 MIT. Si usa el código, por favor cite la monografía.

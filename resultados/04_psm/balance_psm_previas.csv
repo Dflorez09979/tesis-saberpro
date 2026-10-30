@@ -1,0 +1,73 @@
+"covariable","Type","Diff.Un","Diff.Adj"
+"distance","Distance",1.21549867376719,0.125458572578138
+"estu_genero_F","Binary",-0.0490712226279532,-0.0108793446349086
+"estu_genero_M","Binary",0.0490622158097918,0.0108793446349086
+"estu_genero_No reporta","Binary",0.00000900681816134814,0
+"fami_educacionmadre_Educación profesional completa","Binary",0.133201925341145,0.0152003030590018
+"fami_educacionmadre_Educación profesional incompleta","Binary",0.0214213214923958,0.00871294630173312
+"fami_educacionmadre_Ninguno","Binary",-0.0193563898436274,-0.00391845818732835
+"fami_educacionmadre_No Aplica","Binary",-0.000340230118270187,0.000153897149351264
+"fami_educacionmadre_No reporta","Binary",-0.0000105333695153257,0.000153897149351264
+"fami_educacionmadre_No sabe","Binary",0.00106916216517462,0.00111279477223222
+"fami_educacionmadre_Postgrado","Binary",0.0994161271947708,0.0250023676484516
+"fami_educacionmadre_Primaria completa","Binary",-0.0469683372598446,-0.0151766265744862
+"fami_educacionmadre_Primaria incompleta","Binary",-0.100454809595449,-0.0292641348612558
+"fami_educacionmadre_Secundaria (Bachillerato) completa","Binary",-0.0586732210880415,-0.0109030211194242
+"fami_educacionmadre_Secundaria (Bachillerato) incompleta","Binary",-0.0367183117919709,-0.01001515295009
+"fami_educacionmadre_Técnica o tecnológica completa","Binary",0.00891338145581602,0.0135192726583957
+"fami_educacionmadre_Técnica o tecnológica incompleta","Binary",-0.0015000845825838,0.00542191495406762
+"fami_educacionpadre_Educación profesional completa","Binary",0.129394276696856,0.0062269154275973
+"fami_educacionpadre_Educación profesional incompleta","Binary",0.0207302143889754,0.0109385358461976
+"fami_educacionpadre_Ninguno","Binary",-0.0233968755591605,-0.00652287148404205
+"fami_educacionpadre_No Aplica","Binary",-0.000322294880075224,0.000224926602898003
+"fami_educacionpadre_No reporta","Binary",-0.000065367108307878,0.000224926602898002
+"fami_educacionpadre_No sabe","Binary",0.00358331083854203,0.00406051709442182
+"fami_educacionpadre_Postgrado","Binary",0.101823527880199,0.0267070745335733
+"fami_educacionpadre_Primaria completa","Binary",-0.0467273838882242,-0.0138625816838716
+"fami_educacionpadre_Primaria incompleta","Binary",-0.123698963301166,-0.034200681882754
+"fami_educacionpadre_Secundaria (Bachillerato) completa","Binary",-0.0436246654297296,-0.00687801875177574
+"fami_educacionpadre_Secundaria (Bachillerato) incompleta","Binary",-0.0335108012873891,-0.0092930201723648
+"fami_educacionpadre_Técnica o tecnológica completa","Binary",0.0133352846220293,0.014963538213846
+"fami_educacionpadre_Técnica o tecnológica incompleta","Binary",0.00247973702745061,0.00741073965337626
+"depto_reside_cod_0","Binary",0.0000573205934733479,0.0000591912112889478
+"depto_reside_cod_11","Binary",0.177327827814254,-0.0171654512737949
+"depto_reside_cod_13","Binary",-0.0215013810823302,-0.00110095652997443
+"depto_reside_cod_15","Binary",-0.0173429299576578,0.000935221138365378
+"depto_reside_cod_17","Binary",0.00853366764541349,0.00372904631120371
+"depto_reside_cod_18","Binary",-0.00923881355878743,0.0000473529690311582
+"depto_reside_cod_19","Binary",-0.0209407674560528,0.000284117814186949
+"depto_reside_cod_20","Binary",-0.0201509202998622,-0.000438014963538213
+"depto_reside_cod_23","Binary",-0.0372472198350204,-0.000627426839662847
+"depto_reside_cod_25","Binary",0.0140196734955227,-0.00510228241310731
+"depto_reside_cod_27","Binary",-0.0131374016126422,0.0000355147267733689
+"depto_reside_cod_41","Binary",-0.02398271320788,-0.000686618050951794
+"depto_reside_cod_44","Binary",-0.0149842276643909,-0.000118382422577896
+"depto_reside_cod_47","Binary",-0.0107952986629121,0.000449853205796004
+"depto_reside_cod_5","Binary",0.0754796409208434,0.0055758121034189
+"depto_reside_cod_50","Binary",-0.000915065424475503,0.000674779808694004
+"depto_reside_cod_52","Binary",-0.0249145912258787,0.0000355147267733693
+"depto_reside_cod_54","Binary",-0.0266031995915504,0.000722132777725162
+"depto_reside_cod_63","Binary",0.000369073078515154,0.00121933895255232
+"depto_reside_cod_66","Binary",0.00759152696445194,0.000461691448053792
+"depto_reside_cod_68","Binary",0.0135506927689461,0.00536272374277868
+"depto_reside_cod_70","Binary",-0.0196441552741281,0.0000118382422577895
+"depto_reside_cod_73","Binary",-0.0157216191583301,-0.000864191684818636
+"depto_reside_cod_76","Binary",0.022304075267154,0.00394213467184393
+"depto_reside_cod_8","Binary",-0.0210490891875973,0.00228478075575338
+"depto_reside_cod_81","Binary",-0.00340651244225087,-0.0000591912112889478
+"depto_reside_cod_85","Binary",-0.00828970960213321,-0.000378823752249266
+"depto_reside_cod_86","Binary",-0.00676970452131632,0.0000473529690311582
+"depto_reside_cod_88","Binary",-0.000429722200474017,-0.0000118382422577896
+"depto_reside_cod_91","Binary",-0.000186626772560041,-0.0000236764845155791
+"depto_reside_cod_94","Binary",-0.000432268163449762,0
+"depto_reside_cod_95","Binary",-0.00136719456493121,0.0000236764845155791
+"depto_reside_cod_97","Binary",-0.000316011762706665,0.0000118382422577896
+"depto_reside_cod_99","Binary",-0.00065167207829741,0
+"depto_reside_cod_99999","Binary",0.000785316759041095,0.000662941566436215
+"estu_areareside_Area Rural","Binary",-0.0768859225860238,-0.0000710294535467282
+"estu_areareside_Cabecera Municipal","Binary",0.0624381339041699,-0.00995596173880109
+"estu_areareside_No reporta","Binary",0.014447788681854,0.0100269911923478
+"estu_tituloobtenidobachiller_Bachiller académico","Binary",0.0935751906630918,0.00417889951699968
+"estu_tituloobtenidobachiller_Bachiller pedagógico o normalista","Binary",-0.00795915537016939,0.00140875082867696
+"estu_tituloobtenidobachiller_Bachiller técnico","Binary",-0.100251539118636,-0.016088171228336
+"estu_tituloobtenidobachiller_No reporta","Binary",0.0146355038257133,0.0105005208826593

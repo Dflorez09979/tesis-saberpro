@@ -1,7 +1,10 @@
-# Los datos no se versionan: se descargan de DataIcfes
-*.txt
-*.csv
-salidas_tesis/
+# Ojo: las bases del ICFES no se versionan (pesan cientos de MB y se descargan de DataIcfes)
+Examen_Saber_Pro_Genericas_*.txt
+data_limpia_*.csv
+# Objetos pesados del pipeline (modelos .rds) y datos a nivel de estudiante
+salidas_tesis/08_objetos/
+salidas_tesis/04_psm/matched_data.csv
+salidas_tesis/05_modelos/predicciones_test.csv
 .Rhistory
 .RData
 .Rproj.user/

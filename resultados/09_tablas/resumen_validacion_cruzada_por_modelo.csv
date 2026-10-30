@@ -1,0 +1,6 @@
+"modelo","hiperparametros_ajustados","metodo_validacion"
+"Regresión lineal","Ninguno (no tiene hiperparámetros de regularización)","No aplica"
+"Ridge","lambda","Validación cruzada de 5 partes (cv.glmnet)"
+"Lasso","lambda","Validación cruzada de 5 partes (cv.glmnet)"
+"Random Forest (Ranger)","mtry, min.node.size (num.trees por curva de error OOB)","Validación cruzada de 5 partes (malla de 9 combinaciones, ampliada una vez si el óptimo queda en el borde, sección 14.0) + error OOB para num.trees"
+"XGBoost","eta, max_depth, min_child_weight, subsample, colsample_bytree","Validación cruzada de 5 partes (xgb.cv): búsqueda aleatoria de 12 combinaciones sobre una malla de 144, con early stopping (tope 1000 rondas) (14.1) + curvas de validación para max_depth y min_child_weight (14.3.2)"
