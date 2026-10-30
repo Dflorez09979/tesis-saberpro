@@ -46,6 +46,10 @@ Para que el jurado pueda revisar las cifras del documento sin correr nada:
 
 Ojo: no se publican los objetos de los modelos (`.rds`, más de 700 MB), la muestra emparejada del PSM ni las predicciones por estudiante. Todos se reconstruyen corriendo los scripts.
 
+## Uso de inteligencia artificial
+
+En este trabajo se usó Claude (Anthropic) como asistente para apoyar la programación y depuración de los scripts de R, organizar y publicar este repositorio (incluido este README) y revisar la redacción de la monografía. El diseño del análisis, las decisiones metodológicas y la interpretación de los resultados son del autor. Todas las cifras, tablas y figuras salen de correr los scripts sobre las bases del ICFES, y el autor revisó cada sugerencia antes de incorporarla.
+
 ## Licencia
 
 MIT. Si usa el código, por favor cite la monografía.
