@@ -1,0 +1,7 @@
+# Los datos no se versionan: se descargan de DataIcfes
+*.txt
+*.csv
+salidas_tesis/
+.Rhistory
+.RData
+.Rproj.user/
